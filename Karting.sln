@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karting", "Karting\Karting.csproj", "{0011B3EA-4DE1-484F-BDD5-63B2B4E161FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0011B3EA-4DE1-484F-BDD5-63B2B4E161FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0011B3EA-4DE1-484F-BDD5-63B2B4E161FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0011B3EA-4DE1-484F-BDD5-63B2B4E161FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0011B3EA-4DE1-484F-BDD5-63B2B4E161FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BDD8F50-B578-4508-A508-55E9EBC40367}
+	EndGlobalSection
+EndGlobal
