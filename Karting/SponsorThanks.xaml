@@ -1,4 +1,4 @@
-﻿<Window x:Class="Karting.InfoMainWindow"
+﻿<Window x:Class="Karting.SponsorThanks"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -23,14 +23,12 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
         <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
-        <Button x:Name="kartSkills2017" Click="kartSkills2017_Click" Background="#FF241D70"  Foreground="#FFEBEBEB" Content="Kart Skills 2017" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.RowSpan="2" />
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="91,34,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Подробная информация" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="220" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="160,4,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Спасибо за спонсорскую поддержку!" TextAlignment="Center" FontFamily="Arial" Height="45" Width="460" FontSize="22" Grid.ColumnSpan="4"/>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
-        <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
-        <Button x:Name="SpisokOrganiztion" Background="#FF241D70"  Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Margin="87,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.Column="2" >
-            <TextBlock Background="#FF241D70"  Foreground="#FFEBEBEB" Text="Список благотворительных организаций" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" FontSize="16"/>
-        </Button>
-        <Button x:Name="oldResults" Background="#FF241D70"  Foreground="#FFEBEBEB" Content="Предыдущие результаты" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,20,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" />
+        <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="141,19,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4"/>
+        <TextBlock x:Name="t_who" TextAlignment="Center" HorizontalAlignment="Left" Margin="0,84,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Подробная информация" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="790" FontSize="18" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="151,44,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Фонд Собак" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="220" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="t_amount" FontFamily="Arial" TextAlignment="Center" FontSize="60"  Text="$50" HorizontalAlignment="Left" Margin="91,94,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"  Height="100" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
     </Grid>
 </Window>

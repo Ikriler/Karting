@@ -45,5 +45,11 @@ namespace Karting
             new InfoMainWindow().Show();
             this.Close();
         }
+
+        private void go_registration_sponsor_Click(object sender, RoutedEventArgs e)
+        {
+            new SponsorRegistration().Show();
+            this.Close();
+        }
     }
 }

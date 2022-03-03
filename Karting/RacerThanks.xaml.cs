@@ -15,25 +15,25 @@ using System.Windows.Shapes;
 namespace Karting
 {
     /// <summary>
-    /// Логика взаимодействия для InfoMainWindow.xaml
+    /// Логика взаимодействия для RacerThanks.xaml
     /// </summary>
-    public partial class InfoMainWindow : Window
+    public partial class RacerThanks : Window
     {
-        public InfoMainWindow()
+        public RacerThanks()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
         }
 
-        private void go_back_Click(object sender, RoutedEventArgs e)
+        private void logout_Click(object sender, RoutedEventArgs e)
         {
             new MainWindow().Show();
             this.Close();
         }
 
-        private void kartSkills2017_Click(object sender, RoutedEventArgs e)
+        private void ok_Click(object sender, RoutedEventArgs e)
         {
-            new InfoKartSkills().Show();
+            new RacerPanel().Show();
             this.Close();
         }
     }

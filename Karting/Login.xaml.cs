@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Karting.DataSetTableAdapters;
+using static Karting.DataSet;
 
 namespace Karting
 {
@@ -29,6 +31,34 @@ namespace Karting
         {
             new MainWindow().Show();
             this.Close();
+        }
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string email = this.t_email.Text;
+            string password = this.t_password.Text;
+
+            UserTableAdapter userTableAdapter = new UserTableAdapter();
+            UserDataTable userRows = new UserDataTable();
+            userTableAdapter.Fill(userRows);
+
+            UserRow user = userRows.Where(u => u.Email.Equals(email) && u.Password.Equals(password)).FirstOrDefault();
+            if(user != null)
+            {
+                MainController.AuthorizeCurrentUser(user);
+                string role = user.ID_Role;
+                switch (role)
+                {
+                    case "R":
+                        new RacerPanel().Show();
+                        this.Close();
+                        break;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Такого пользователя не существует.");
+            }
         }
     }
 }

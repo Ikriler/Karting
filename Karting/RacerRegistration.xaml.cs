@@ -144,7 +144,8 @@ namespace Karting
             {
                 racersAdditionTableAdapter.RacerAdditionInsertQuery(user.Email, racer.ID_Racer, realPathPhoto);
                 MessageBox.Show("Пользователь успешно создан.");
-                new MainWindow().Show();
+                MainController.AuthorizeCurrentUser(user);
+                new RegistrationOnRace().Show();
                 this.Close();
             }
             else 

@@ -32,7 +32,7 @@
         <Button x:Name="go_info" Background="White" Click="go_info_Click" HorizontalAlignment="Left" Margin="39,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="2">
             <Image Source="Image/Informatsia.png"></Image>
         </Button>
-        <Button x:Name="go_registration_sponsor" Background="White" HorizontalAlignment="Left" Margin="42,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="0.417,0.571" >
+        <Button x:Name="go_registration_sponsor" Click="go_registration_sponsor_Click" Background="White" HorizontalAlignment="Left" Margin="42,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="0.417,0.571" >
             <Image Source="Image/Dengi.png"></Image>
         </Button>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,20,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Регистрация гонщика" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="165" FontSize="16"/>

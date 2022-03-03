@@ -15,23 +15,17 @@ using System.Windows.Shapes;
 namespace Karting
 {
     /// <summary>
-    /// Логика взаимодействия для InfoMainWindow.xaml
+    /// Логика взаимодействия для Map.xaml
     /// </summary>
-    public partial class InfoMainWindow : Window
+    public partial class Map : Window
     {
-        public InfoMainWindow()
+        public Map()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
-        {
-            new MainWindow().Show();
-            this.Close();
-        }
-
-        private void kartSkills2017_Click(object sender, RoutedEventArgs e)
         {
             new InfoKartSkills().Show();
             this.Close();

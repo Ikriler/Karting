@@ -55,23 +55,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="InfoKartSkills.xaml.cs">
+      <DependentUpon>InfoKartSkills.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InfoMainWindow.xaml.cs">
       <DependentUpon>InfoMainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\User.cs" />
+    <Compile Include="RacerPanel.xaml.cs">
+      <DependentUpon>RacerPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RacerRegistration.xaml.cs">
       <DependentUpon>RacerRegistration.xaml</DependentUpon>
     </Compile>
     <Compile Include="RacerRegistrationQuestion.xaml.cs">
       <DependentUpon>RacerRegistrationQuestion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RacerThanks.xaml.cs">
+      <DependentUpon>RacerThanks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationOnRace.xaml.cs">
+      <DependentUpon>RegistrationOnRace.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SponsorRegistration.xaml.cs">
       <DependentUpon>SponsorRegistration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SponsorThanks.xaml.cs">
+      <DependentUpon>SponsorThanks.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Validations.cs" />
+    <Page Include="InfoKartSkills.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InfoMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,6 +121,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RacerPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RacerRegistration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,7 +137,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="RacerThanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistrationOnRace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SponsorRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SponsorThanks.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -155,6 +197,9 @@
     <Resource Include="Image\Informatsia.png" />
     <Resource Include="Image\Klyuch.png" />
     <Resource Include="Image\Shlem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\kart-skill-2017-map-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
