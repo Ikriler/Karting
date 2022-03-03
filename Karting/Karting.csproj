@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AllOldResults.xaml.cs">
+      <DependentUpon>AllOldResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CharityList.xaml.cs">
+      <DependentUpon>CharityList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InfoKartSkills.xaml.cs">
       <DependentUpon>InfoKartSkills.xaml</DependentUpon>
     </Compile>
@@ -90,6 +96,14 @@
       <DependentUpon>SponsorThanks.xaml</DependentUpon>
     </Compile>
     <Compile Include="Validations.cs" />
+    <Page Include="AllOldResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InfoKartSkills.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

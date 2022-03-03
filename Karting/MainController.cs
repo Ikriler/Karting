@@ -12,6 +12,7 @@ namespace Karting
 {
     class MainController
     {
+        public static string IconPath = AppDomain.CurrentDomain.BaseDirectory + "AvatarIcon\\";
 
         #region CurrentUser
 

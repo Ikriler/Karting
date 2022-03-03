@@ -136,13 +136,14 @@ namespace Karting
             UserRow user = userRows.Where(u => u.Email.Equals(email)).FirstOrDefault();
 
             string[] photo_path_params = photo_path.Split('.');
-            string realPathPhoto = AppDomain.CurrentDomain.BaseDirectory + "AvatarIcon\\" + Guid.NewGuid() + "." + photo_path_params[photo_path_params.Length - 1];
+            string newPhotoName = Guid.NewGuid() + "." + photo_path_params[photo_path_params.Length - 1];
+            string realPathPhoto = MainController.IconPath + newPhotoName;
             File.Copy(photo_path, realPathPhoto);
 
 
             if (racer != null && user != null)
             {
-                racersAdditionTableAdapter.RacerAdditionInsertQuery(user.Email, racer.ID_Racer, realPathPhoto);
+                racersAdditionTableAdapter.RacerAdditionInsertQuery(user.Email, racer.ID_Racer, newPhotoName);
                 MessageBox.Show("Пользователь успешно создан.");
                 MainController.AuthorizeCurrentUser(user);
                 new RegistrationOnRace().Show();

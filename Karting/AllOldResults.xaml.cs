@@ -14,9 +14,12 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    public partial class InfoMainWindow : Window
+    /// <summary>
+    /// Логика взаимодействия для AllOldResults.xaml
+    /// </summary>
+    public partial class AllOldResults : Window
     {
-        public InfoMainWindow()
+        public AllOldResults()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
@@ -24,25 +27,7 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            this.Close();
-        }
-
-        private void kartSkills2017_Click(object sender, RoutedEventArgs e)
-        {
-            new InfoKartSkills().Show();
-            this.Close();
-        }
-
-        private void SpisokOrganiztion_Click(object sender, RoutedEventArgs e)
-        {
-            new CharityList().Show();
-            this.Close();
-        }
-
-        private void oldResults_Click(object sender, RoutedEventArgs e)
-        {
-            new AllOldResults().Show();
+            new InfoMainWindow().Show();
             this.Close();
         }
     }
