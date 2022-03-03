@@ -21,7 +21,7 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="0,95,-1,51" TextWrapping="Wrap" Text="Список благотврительных организаций" TextAlignment="Center" FontFamily="Arial" Height="45" Width="795" FontSize="22" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="0,95,-1,51" TextWrapping="Wrap" Text="Список благотворительных организаций" TextAlignment="Center" FontFamily="Arial" Height="45" Width="795" FontSize="22" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
         <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
         <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
