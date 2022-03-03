@@ -10,39 +10,36 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Threading;
-using System.Windows.Threading;
 
 namespace Karting
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для RacerRegistrationQuestion.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RacerRegistrationQuestion : Window
     {
-        public MainWindow()
+        public RacerRegistrationQuestion()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
         }
 
-        private void go_registration_racer_Click(object sender, RoutedEventArgs e)
+        private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new RacerRegistrationQuestion().Show();
+            new MainWindow().Show();
             this.Close();
         }
 
-        private void enter_system_Click(object sender, RoutedEventArgs e)
+        private void answer_yes_Click(object sender, RoutedEventArgs e)
         {
             new Login().Show();
             this.Close();
         }
 
-        private void go_info_Click(object sender, RoutedEventArgs e)
+        private void answer_no_Click(object sender, RoutedEventArgs e)
         {
-            new InfoMainWindow().Show();
+            new RacerRegistration().Show();
             this.Close();
         }
     }

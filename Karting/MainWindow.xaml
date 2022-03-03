@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Karting"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Kart Skills" Height="600" Width="800" Icon="Image/checkered-flag-sports-tool.ico" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
+        <Button x:Name="go_registration_racer" Click="go_registration_racer_Click" HorizontalAlignment="Left" Background="White"  Margin="50,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2">
+            <Image Source="Image/Shlem.png"></Image>
+        </Button>
+        <Button x:Name="enter_system" Click="enter_system_Click" Background="White" HorizontalAlignment="Left" Margin="16,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="3">
+            <Image Source="Image/Klyuch.png"></Image>
+        </Button>
+        <Button x:Name="go_info" Background="White" Click="go_info_Click" HorizontalAlignment="Left" Margin="39,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="2">
+            <Image Source="Image/Informatsia.png"></Image>
+        </Button>
+        <Button x:Name="go_registration_sponsor" Background="White" HorizontalAlignment="Left" Margin="42,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Height="105" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="0.417,0.571" >
+            <Image Source="Image/Dengi.png"></Image>
+        </Button>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="30,20,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Регистрация гонщика" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="165" FontSize="16"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="22,20,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Регистрация спонсора" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="170" FontSize="16" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="54,20,0,0" Grid.Row="3" TextWrapping="Wrap" Text="О событии" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="90" FontSize="16" Grid.Column="2"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="21,20,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Вход в систему" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="120" FontSize="16" Grid.Column="3"/>
+        <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
     </Grid>
 </Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="Karting.RacerRegistrationQuestion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="Kart Skills" Height="600" Width="800" Icon="Image/checkered-flag-sports-tool.ico" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
+        <Button x:Name="answer_yes" Click="answer_yes_Click" Background="#FF241D70"  Foreground="#FFEBEBEB" Content="Да" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="32,69,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" Height="39" Grid.Column="1" RenderTransformOrigin="0.417,0.571" Grid.RowSpan="2" />
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="101,79,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Учавствовали ранее?" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="200" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
+        <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+        <Button x:Name="answer_no" Click="answer_no_Click" Background="#FF241D70" Content="Нет" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="22,69,0,0" Grid.Row="2" VerticalAlignment="Top" Width="139" Height="39" Grid.Column="2" RenderTransformOrigin="0.417,0.571" Grid.RowSpan="2" />
+    </Grid>
+</Window>
