@@ -21,5 +21,21 @@ namespace Karting
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
         }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            ControlCharity controlCharity = new ControlCharity();
+            controlCharity.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlCharity.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

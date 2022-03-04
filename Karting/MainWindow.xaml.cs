@@ -17,9 +17,6 @@ using System.Windows.Threading;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -30,25 +27,33 @@ namespace Karting
 
         private void go_registration_racer_Click(object sender, RoutedEventArgs e)
         {
-            new RacerRegistrationQuestion().Show();
+            RacerRegistrationQuestion racerRegistrationQuestion = new RacerRegistrationQuestion();
+            racerRegistrationQuestion.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerRegistrationQuestion.Show();
             this.Close();
         }
 
         private void enter_system_Click(object sender, RoutedEventArgs e)
         {
-            new Login().Show();
+            Login login = new Login();
+            login.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            login.Show();
             this.Close();
         }
 
         private void go_info_Click(object sender, RoutedEventArgs e)
         {
-            new InfoMainWindow().Show();
+            InfoMainWindow infoMainWindow = new InfoMainWindow();
+            infoMainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            infoMainWindow.Show();
             this.Close();
         }
 
         private void go_registration_sponsor_Click(object sender, RoutedEventArgs e)
         {
-            new SponsorRegistration().Show();
+            SponsorRegistration sponsorRegistration = new SponsorRegistration();
+            sponsorRegistration.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            sponsorRegistration.Show();
             this.Close();
         }
     }

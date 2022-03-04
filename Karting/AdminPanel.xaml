@@ -23,18 +23,18 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
         <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
-        <Button x:Name="racers" Background="#FF241D70"  Foreground="#FFEBEBEB" Content="Пользователи" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Button x:Name="users" Click="users_Click" Background="#FF241D70"  Foreground="#FFEBEBEB" Content="Пользователи" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.RowSpan="2" />
         <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="101,29,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="195" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"><Run Text="Меню "/><Run Text="администратора"/></TextBlock>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="34,15,0,0" VerticalAlignment="Top" Width="140" Height="40" Grid.Column="3"/>
-        <Button x:Name="sponsors" Background="#FF241D70" Content="Волонтеры" Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Margin="107,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.Column="2" >
+        <Button x:Name="volunteers" Click="volunteers_Click" Background="#FF241D70" Content="Волонтеры" Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Margin="107,0,0,0" Grid.Row="2" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.Column="2" >
             
         </Button>
-        <Button x:Name="racers_Copy" Background="#FF241D70"  Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,9,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" >
+        <Button x:Name="charities" Background="#FF241D70" Click="charities_Click" Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="18" HorizontalAlignment="Left" Margin="65,9,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" >
             <TextBlock Background="#FF241D70"  Foreground="#FFEBEBEB" Text="Благотворительные организации" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" FontSize="18"/>
         </Button>
-        <Button x:Name="sponsors_Copy" Content="Инвентарь" Background="#FF241D70" Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Margin="107,9,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.Column="2" >
+        <Button x:Name="inventory" Click="inventory_Click" Content="Инвентарь" Background="#FF241D70" Foreground="#FFEBEBEB" FontFamily="Arial" FontSize="16" HorizontalAlignment="Left" Margin="107,9,0,0" Grid.Row="3" VerticalAlignment="Top" Width="220" Height="69" RenderTransformOrigin="0.417,0.571" Grid.ColumnSpan="2" Grid.Column="2" >
             
         </Button>
     </Grid>

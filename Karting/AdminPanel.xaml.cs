@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для AdminPanel.xaml
-    /// </summary>
     public partial class AdminPanel : Window
     {
         public AdminPanel()
@@ -30,6 +27,38 @@ namespace Karting
             MainWindow mainWindow = new MainWindow();
             mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             mainWindow.Show();
+            this.Close();
+        }
+
+        private void users_Click(object sender, RoutedEventArgs e)
+        {
+            ControlUsers controlUsers = new ControlUsers();
+            controlUsers.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlUsers.Show();
+            this.Close();
+        }
+
+        private void charities_Click(object sender, RoutedEventArgs e)
+        {
+            ControlCharity controlCharity = new ControlCharity();
+            controlCharity.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlCharity.Show();
+            this.Close();
+        }
+
+        private void volunteers_Click(object sender, RoutedEventArgs e)
+        {
+            ControlVolunteer controlVolunteer = new ControlVolunteer();
+            controlVolunteer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlVolunteer.Show();
+            this.Close();
+        }
+
+        private void inventory_Click(object sender, RoutedEventArgs e)
+        {
+            Inventory inventory = new Inventory();
+            inventory.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            inventory.Show();
             this.Close();
         }
     }

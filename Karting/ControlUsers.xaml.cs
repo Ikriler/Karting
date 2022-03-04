@@ -14,15 +14,28 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для ControlUsers.xaml
-    /// </summary>
     public partial class ControlUsers : Window
     {
         public ControlUsers()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+        }
+
+        private void go_back_Click(object sender, RoutedEventArgs e)
+        {
+            AdminPanel adminPanel = new AdminPanel();
+            adminPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            adminPanel.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
+            this.Close();
         }
     }
 }
