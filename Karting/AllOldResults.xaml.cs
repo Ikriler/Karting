@@ -19,20 +19,32 @@ namespace Karting
 {
     public partial class AllOldResults : Window
     {
-        public AllOldResults()
+        bool youRacer = false;
+        public AllOldResults(bool racer = false)
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             InitComboGender();
             InitComboEvent();
+            youRacer = racer;
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            InfoMainWindow infoMainWindow = new InfoMainWindow();
-            infoMainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-            infoMainWindow.Show();
-            this.Close();
+            if (!youRacer)
+            {
+                InfoMainWindow infoMainWindow = new InfoMainWindow();
+                infoMainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                infoMainWindow.Show();
+                this.Close();
+            }
+            else 
+            {
+                MyResults myResults = new MyResults();
+                myResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                myResults.Show();
+                this.Close();
+            }
         }
 
         private void InitComboGender()

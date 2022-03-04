@@ -40,7 +40,7 @@ namespace Karting
 
         private void showAllRsult_Click(object sender, RoutedEventArgs e)
         {
-            AllOldResults allOldResults = new AllOldResults();
+            AllOldResults allOldResults = new AllOldResults(true);
             allOldResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             allOldResults.Show();
             this.Close();

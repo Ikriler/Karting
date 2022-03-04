@@ -75,7 +75,9 @@ namespace Karting
 
         private void cancel_Click(object sender, RoutedEventArgs e)
         {
-            new RacerPanel().Show();
+            RacerPanel racerPanel = new RacerPanel();
+            racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerPanel.Show();
             this.Close();
         }
 
