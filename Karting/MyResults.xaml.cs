@@ -51,6 +51,11 @@ namespace Karting
 
             }
 
+            if(myResultRows.Count == 0)
+            {
+                MessageBox.Show("Вы еще не участвовали в гонках.");
+            }
+
             this.myResultList.ItemsSource = myResultRows;
         }
 

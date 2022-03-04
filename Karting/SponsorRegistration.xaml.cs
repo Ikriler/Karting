@@ -199,7 +199,9 @@ namespace Karting
 
             racerSponsorConnectorTableAdapter.Insert(racerId, sponsor.ID_Sponsorship);
 
-            SponsorThanks sponsorThanks = new SponsorThanks(amount, who);
+            string CharityName = (this.l_charity.SelectedItem as DataRowView)["Charity_Name"].ToString();
+
+            SponsorThanks sponsorThanks = new SponsorThanks(amount, who, CharityName);
             sponsorThanks.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             sponsorThanks.Show();
             this.Close();

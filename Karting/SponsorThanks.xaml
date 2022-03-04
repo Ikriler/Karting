@@ -28,7 +28,7 @@
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="141,19,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="4"/>
         <TextBlock x:Name="t_who" TextAlignment="Center" HorizontalAlignment="Left" Margin="0,84,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Подробная информация" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="790" FontSize="18" Grid.ColumnSpan="4" Grid.RowSpan="2"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="151,44,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Фонд Собак" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="220" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="t_charity" TextAlignment="Center" HorizontalAlignment="Left" Margin="101,39,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Фонд Собак" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="200" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="t_amount" FontFamily="Arial" TextAlignment="Center" FontSize="60"  Text="$50" HorizontalAlignment="Left" Margin="91,94,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"  Height="100" Width="210" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3"/>
     </Grid>
 </Window>

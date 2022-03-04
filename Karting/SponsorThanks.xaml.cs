@@ -16,12 +16,13 @@ namespace Karting
 {
     public partial class SponsorThanks : Window
     {
-        public SponsorThanks(int amount, string who)
+        public SponsorThanks(int amount, string who, string charityName)
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             this.t_amount.Text = amount.ToString();
             this.t_who.Text = who;
+            this.t_charity.Text = charityName;
         }
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
