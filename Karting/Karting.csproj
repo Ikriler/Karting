@@ -76,6 +76,9 @@
     <Compile Include="ControlRacers.xaml.cs">
       <DependentUpon>ControlRacers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ControlUsers.xaml.cs">
+      <DependentUpon>ControlUsers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlVolunteer.xaml.cs">
       <DependentUpon>ControlVolunteer.xaml</DependentUpon>
     </Compile>
@@ -160,6 +163,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlRacers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
