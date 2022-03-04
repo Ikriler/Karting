@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для RacerPanel.xaml
-    /// </summary>
     public partial class RacerPanel : Window
     {
         public RacerPanel()
@@ -27,19 +24,24 @@ namespace Karting
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
         private void showContact_Click(object sender, RoutedEventArgs e)
         {
-            string message = String.Format("Email: {0}", MainController.currentUser.Email);
-            MessageBox.Show(message, "Контакты");
+            ContactCard contactCard = new ContactCard();
+            contactCard.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            contactCard.Show();
         }
 
         private void registrationOnRace_Click(object sender, RoutedEventArgs e)
         {
-            new RegistrationOnRace().Show();
+            RegistrationOnRace registrationOnRace = new RegistrationOnRace();
+            registrationOnRace.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            registrationOnRace.Show();
             this.Close();
         }
 

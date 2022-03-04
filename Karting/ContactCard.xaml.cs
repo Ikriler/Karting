@@ -14,14 +14,16 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для ContactCard.xaml
-    /// </summary>
     public partial class ContactCard : Window
     {
         public ContactCard()
         {
             InitializeComponent();
+        }
+
+        private void close_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

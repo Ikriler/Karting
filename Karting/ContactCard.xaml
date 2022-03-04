@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Karting"
         mc:Ignorable="d"
-        Title="ContactCard" Height="287" Width="489" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None">
-    <Grid>
+        Title="ContactCard" Height="287" Width="485" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" BorderBrush="Black" BorderThickness="1">
+    <Grid Margin="0,0,-1,0">
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextAlignment="Center" Margin="110,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="40" Width="260" FontSize="24" Text="Контакты"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextAlignment="Center" Margin="75,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="70" Width="345" FontSize="24" Text="Email: yaochenystal@mail.ru"/>
-        <Button Margin="450,0,0,252" BorderBrush="White" BorderThickness="1" Background="Transparent">
-            <Image Source="Image/cross.png" Width="34" Height="32"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextAlignment="Center" Margin="85,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="40" Width="80" FontSize="22" Text="Email:" FontWeight="Bold"/>
+        <Button Margin="449,0,1,252" BorderBrush="White" BorderThickness="1" Background="Transparent" x:Name="close" Click="close_Click">
+            <Image Source="Image/cross.png" Width="35" Height="32"/>
         </Button>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextAlignment="Center" Margin="95,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="120" FontSize="22" FontWeight="Bold"><Run Text="Телефон"/><Run Text=": "/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" TextAlignment="Center" Margin="210,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="185" FontSize="22" Text="+7 999 999 99 99"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" TextAlignment="Center" Margin="165,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="245" FontSize="22" Text="yugkyug@kartskills.org"/>
     </Grid>
 </Window>
