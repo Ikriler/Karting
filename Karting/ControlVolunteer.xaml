@@ -1,0 +1,51 @@
+﻿<Window x:Class="Karting.ControlVolunteer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Karting"
+        mc:Ignorable="d"
+        Title="Kart Skills" Height="600" Width="800" Icon="Image/checkered-flag-sports-tool.ico" ResizeMode="NoResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="160,14,0,36" Grid.Row="1" TextWrapping="Wrap" Text="Управление волонтерами" TextAlignment="Center" FontFamily="Arial" Height="45" Width="460" FontSize="22" Grid.ColumnSpan="4"/>
+        <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
+        <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
+        <Button x:Name="go_back" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="130,79,0,66" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="150" FontSize="18" Grid.RowSpan="2" Grid.ColumnSpan="2"><Run Text="Отсортировать"/><Run Text=":"/></TextBlock>
+        <ComboBox x:Name="c_gender" Grid.Column="1" HorizontalAlignment="Left" Margin="86,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="search" Background="#FF241D70" Content="Сортировка" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ListView Grid.ColumnSpan="4" Margin="1,84,-1,1" Grid.Row="2" Grid.RowSpan="3">
+            <ListView.View>
+                <GridView AllowsColumnReorder="true">
+
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Фамилия" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Имя" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Страна" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Пол" Width="200"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="logout" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="59,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="81,39,0,31" Grid.Row="2" TextWrapping="Wrap" Text="Всего волонтеров: 10" TextAlignment="Center" FontFamily="Arial" Width="225" FontSize="18" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Button x:Name="search_Copy" Background="#FF241D70" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="50" Grid.ColumnSpan="2">
+            <TextBlock Text="Загрузка волонтеров" TextWrapping="Wrap" TextAlignment="Center"/>
+        </Button>
+    </Grid>
+</Window>

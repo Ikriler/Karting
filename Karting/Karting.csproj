@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddOrEditCharity.xaml.cs">
+      <DependentUpon>AddOrEditCharity.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AdminPanel.xaml.cs">
       <DependentUpon>AdminPanel.xaml</DependentUpon>
     </Compile>
@@ -72,6 +75,9 @@
     </Compile>
     <Compile Include="ControlRacers.xaml.cs">
       <DependentUpon>ControlRacers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVolunteer.xaml.cs">
+      <DependentUpon>ControlVolunteer.xaml</DependentUpon>
     </Compile>
     <Compile Include="CoordinatorEditRacer.xaml.cs">
       <DependentUpon>CoordinatorEditRacer.xaml</DependentUpon>
@@ -126,6 +132,13 @@
       <DependentUpon>SponsorThanks.xaml</DependentUpon>
     </Compile>
     <Compile Include="Validations.cs" />
+    <Compile Include="VolunteerLoading.xaml.cs">
+      <DependentUpon>VolunteerLoading.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AddOrEditCharity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AdminPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -147,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ControlRacers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlVolunteer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -234,6 +251,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SponsorThanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VolunteerLoading.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
