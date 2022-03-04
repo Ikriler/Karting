@@ -42,5 +42,29 @@ namespace Karting
             new RegistrationOnRace().Show();
             this.Close();
         }
+
+        private void editUser_Click(object sender, RoutedEventArgs e)
+        {
+            EditRacer editRacer = new EditRacer();
+            editRacer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            editRacer.Show();
+            this.Close();
+        }
+
+        private void myRezult_Click(object sender, RoutedEventArgs e)
+        {
+            MyResults myResults = new MyResults();
+            myResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            myResults.Show();
+            this.Close();
+        }
+
+        private void mySponsor_Click(object sender, RoutedEventArgs e)
+        {
+            MySponsors mySponsors = new MySponsors();
+            mySponsors.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mySponsors.Show();
+            this.Close();
+        }
     }
 }

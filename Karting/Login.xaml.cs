@@ -50,7 +50,21 @@ namespace Karting
                 switch (role)
                 {
                     case "R":
-                        new RacerPanel().Show();
+                        RacerPanel racerPanel = new RacerPanel();
+                        racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                        racerPanel.Show();
+                        this.Close();
+                        break;
+                    case "A":
+                        AdminPanel adminPanel = new AdminPanel();
+                        adminPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                        adminPanel.Show();
+                        this.Close();
+                        break;
+                    case "C":
+                        CoordinatorPanel coordinatorPanel = new CoordinatorPanel();
+                        coordinatorPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                        coordinatorPanel.Show();
                         this.Close();
                         break;
                 }

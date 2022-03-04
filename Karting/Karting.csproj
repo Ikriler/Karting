@@ -55,11 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllOldResults.xaml.cs">
       <DependentUpon>AllOldResults.xaml</DependentUpon>
     </Compile>
     <Compile Include="CharityList.xaml.cs">
       <DependentUpon>CharityList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorPanel.xaml.cs">
+      <DependentUpon>CoordinatorPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditRacer.xaml.cs">
+      <DependentUpon>EditRacer.xaml</DependentUpon>
     </Compile>
     <Compile Include="InfoKartSkills.xaml.cs">
       <DependentUpon>InfoKartSkills.xaml</DependentUpon>
@@ -74,6 +83,12 @@
       <DependentUpon>Map.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\User.cs" />
+    <Compile Include="MyResults.xaml.cs">
+      <DependentUpon>MyResults.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MySponsors.xaml.cs">
+      <DependentUpon>MySponsors.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RacerPanel.xaml.cs">
       <DependentUpon>RacerPanel.xaml</DependentUpon>
     </Compile>
@@ -92,15 +107,30 @@
     <Compile Include="SponsorRegistration.xaml.cs">
       <DependentUpon>SponsorRegistration.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SponsorsReview.xaml.cs">
+      <DependentUpon>SponsorsReview.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SponsorThanks.xaml.cs">
       <DependentUpon>SponsorThanks.xaml</DependentUpon>
     </Compile>
     <Compile Include="Validations.cs" />
+    <Page Include="AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AllOldResults.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoordinatorPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditRacer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -139,6 +169,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MyResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MySponsors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RacerPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,6 +198,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SponsorRegistration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SponsorsReview.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
