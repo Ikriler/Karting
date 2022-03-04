@@ -104,6 +104,14 @@ namespace Karting
 
             #region VALIDATION
 
+            if(this.check_one.IsChecked.Value == false &&
+                this.check_two.IsChecked.Value == false &&
+                this.check_three.IsChecked.Value == false)
+            {
+                MessageBox.Show("Должна быть выбрана хотя бы одна гонка");
+                return;
+            }
+
             #endregion
 
 

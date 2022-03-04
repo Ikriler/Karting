@@ -24,6 +24,17 @@ namespace Karting
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             InitComboRacer();
+            InitComboCharity();
+        }
+
+        private void InitComboCharity()
+        {
+            CharityTableAdapter charityTableAdapter = new CharityTableAdapter();
+            CharityDataTable charityRows = new CharityDataTable();
+            charityTableAdapter.Fill(charityRows);
+
+            this.l_charity.ItemsSource = charityRows;
+            this.l_charity.DisplayMemberPath = "Charity_Name";
         }
 
         private void InitComboRacer() 
@@ -58,14 +69,14 @@ namespace Karting
             }
         }
 
-        private void add50_Click(object sender, RoutedEventArgs e)
+        private void add10_Click(object sender, RoutedEventArgs e)
         {
-            this.t_amount.Text = (Convert.ToInt32(this.t_amount.Text) + 50).ToString();
+            this.t_amount.Text = (Convert.ToInt32(this.t_amount.Text) + 10).ToString();
         }
 
-        private void del50_Click(object sender, RoutedEventArgs e)
+        private void del10_Click(object sender, RoutedEventArgs e)
         {
-            long newAmount = Convert.ToInt64(this.t_amount.Text) - 50;
+            long newAmount = Convert.ToInt64(this.t_amount.Text) - 10;
             if(newAmount > 0)
                 this.t_amount.Text = newAmount.ToString();
         }
@@ -159,6 +170,11 @@ namespace Karting
             if (cardCVC.Count() < 3)
             {
                 MessageBox.Show("Неправильный CVC.");
+                return;
+            }
+            if(this.l_charity.SelectedItem == null)
+            {
+                MessageBox.Show("Не выбрана благотворительная организация");
                 return;
             }
 

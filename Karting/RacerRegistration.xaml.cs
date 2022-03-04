@@ -104,11 +104,25 @@ namespace Karting
 
             #region VALIDATION
 
+            int age = Convert.ToInt32((DateTime.Today.Subtract(bd_date)).Days / 365);
+
+            if(age < 10)
+            {
+                MessageBox.Show("Вам должно быть не менее 10 лет");
+                return;
+            }
+
+            if(!Validations.CheckMail(email))
+            {
+                MessageBox.Show("Неправильный email.");
+                return;
+            }
+
             if(!(Validations.StringIsNotEmpty(email) &&
-                Validations.StringIsNotEmpty(email) &&
-                Validations.StringIsNotEmpty(email) &&
-                Validations.StringIsNotEmpty(email) &&
-                Validations.StringIsNotEmpty(email)))
+                Validations.StringIsNotEmpty(password) &&
+                Validations.StringIsNotEmpty(rePassword) &&
+                Validations.StringIsNotEmpty(name) &&
+                Validations.StringIsNotEmpty(last_name)))
             {
                 MessageBox.Show("Поля не должны быть пустыми.");
                 return;
@@ -117,6 +131,18 @@ namespace Karting
             if(password != rePassword)
             {
                 MessageBox.Show("Пароли не совпадают.");
+                return;
+            }
+
+            if(!Validations.CheckPassword(password))
+            {
+                MessageBox.Show("Пароль слишком простой.");
+                return;
+            }
+
+            if(!Validations.StringIsNotEmpty(photo_path))
+            {
+                MessageBox.Show("Выберите фотографию.");
                 return;
             }
 

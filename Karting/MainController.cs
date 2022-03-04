@@ -55,5 +55,7 @@ namespace Karting
                 }
             }
         }
+
+        public static List<string> AgeCategoryList = new List<string>() { "до 18", "от 18 до 29", "от 30 до 39", "от 40 до 55", "от 56 до 70", "более 70" };
     }
 }
