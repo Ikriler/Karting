@@ -137,6 +137,9 @@
     <Compile Include="RegistrationOnRace.xaml.cs">
       <DependentUpon>RegistrationOnRace.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ReportPrinting.xaml.cs">
+      <DependentUpon>ReportPrinting.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SponsorRegistration.xaml.cs">
       <DependentUpon>SponsorRegistration.xaml</DependentUpon>
     </Compile>
@@ -274,6 +277,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegistrationOnRace.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReportPrinting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
