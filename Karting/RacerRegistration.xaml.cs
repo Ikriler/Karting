@@ -90,6 +90,16 @@ namespace Karting
 
             #region VALIDATION
 
+            if(!(Validations.StringIsNotEmpty(email) &&
+                Validations.StringIsNotEmpty(email) &&
+                Validations.StringIsNotEmpty(email) &&
+                Validations.StringIsNotEmpty(email) &&
+                Validations.StringIsNotEmpty(email)))
+            {
+                MessageBox.Show("Поля не должны быть пустыми.");
+                return;
+            }
+
             #endregion
 
 
