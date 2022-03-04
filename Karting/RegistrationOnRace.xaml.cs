@@ -104,6 +104,12 @@ namespace Karting
 
             #region VALIDATION
 
+            if(organisationCost == 0)
+            {
+                MessageBox.Show("Взонс не должен быть равен 0.");
+                return;
+            }
+
             if(this.check_one.IsChecked.Value == false &&
                 this.check_two.IsChecked.Value == false &&
                 this.check_three.IsChecked.Value == false)
