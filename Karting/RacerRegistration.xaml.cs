@@ -71,18 +71,32 @@ namespace Karting
             {
                 selectedGender = (this.c_gender.SelectedItem as DataRowView)["Gender_Name"].ToString();
             }
-
+            else
+            {
+                MessageBox.Show("Пол не выбран.");
+                return;
+            }
             //Country
             string selectedCountry = "";
             if (this.c_country.SelectedItem != null)
             {
                 selectedCountry = (this.c_country.SelectedItem as DataRowView)["Country_Name"].ToString();
             }
+            else
+            {
+                MessageBox.Show("Страна не выбрана.");
+                return;
+            }
             //Birth Day Date
             DateTime bd_date = new DateTime();
             if (this.dp_bd.SelectedDate != null)
             {
                bd_date = (DateTime)this.dp_bd.SelectedDate;
+            }
+            else 
+            {
+                MessageBox.Show("Дата не выбрана.");
+                return;
             }
 
             string photo_path = (string)this.textbox_photo_path.Text;
@@ -97,6 +111,12 @@ namespace Karting
                 Validations.StringIsNotEmpty(email)))
             {
                 MessageBox.Show("Поля не должны быть пустыми.");
+                return;
+            }
+
+            if(password != rePassword)
+            {
+                MessageBox.Show("Пароли не совпадают.");
                 return;
             }
 

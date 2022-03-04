@@ -126,22 +126,63 @@ namespace Karting
             }
 
             string cardHuman = this.t_card_human.Text;
-            string carNumber = this.t_card_number.Text;
+            string cardNumber = this.t_card_number.Text;
             string cardMonth = this.t_card_month.Text;
             string cardYear = this.t_card_year.Text;
             string cardCVC = this.t_card_cvc.Text;
 
             int amount = Convert.ToInt32(this.t_amount.Text);
 
-            string who = String.Format("{0} {1}({2}) из {3}", racer["First_Name"], racer["Last_Name"], racer["ID_Racer"], racer["ID_Country"]);
 
             #region VALIDATION
+                
+            if(!Validations.StringIsNotEmpty(yourName))
+            {
+                MessageBox.Show("Поле 'Ваше имя' не должно быть пустым.");
+                return;
+            }
+            if(cardNumber.Count() < 16)
+            {
+                MessageBox.Show("Неправильный номер карты.");
+                return;
+            }
+            if (Convert.ToInt32(cardMonth) <=0 || Convert.ToInt32(cardMonth) > 12)
+            {
+                MessageBox.Show("Неправильный месяц срока действия.");
+                return;
+            }
+            if (cardYear.Count() < 4)
+            {
+                MessageBox.Show("Неправильный год срока действия.");
+                return;
+            }
+            if (cardCVC.Count() < 3)
+            {
+                MessageBox.Show("Неправильный CVC.");
+                return;
+            }
 
             #endregion
 
 
+            string who = String.Format("{0} {1}({2}) из {3}", racer["First_Name"], racer["Last_Name"], racer["ID_Racer"], racer["ID_Country"]);
 
-            //do something
+            SponsorshipTableAdapter sponsorshipTableAdapter = new SponsorshipTableAdapter();
+            SponsorshipDataTable sponsorshipRows = new SponsorshipDataTable();
+            sponsorshipTableAdapter.Fill(sponsorshipRows);
+
+            RacerSponsorConnectorTableAdapter racerSponsorConnectorTableAdapter = new RacerSponsorConnectorTableAdapter();
+            RacerSponsorConnectorDataTable racerSponsorConnectorRows = new RacerSponsorConnectorDataTable();
+            racerSponsorConnectorTableAdapter.Fill(racerSponsorConnectorRows);
+
+            sponsorshipTableAdapter.Insert(yourName, amount);
+            sponsorshipTableAdapter.Fill(sponsorshipRows);
+
+            int racerId = Convert.ToInt32(racer["ID_Racer"]);
+            SponsorshipRow sponsor = sponsorshipRows.Where(s => s.SponsorName.Equals(yourName)).LastOrDefault();
+
+            racerSponsorConnectorTableAdapter.Insert(racerId, sponsor.ID_Sponsorship);
+
             SponsorThanks sponsorThanks = new SponsorThanks(amount, who);
             sponsorThanks.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             sponsorThanks.Show();
