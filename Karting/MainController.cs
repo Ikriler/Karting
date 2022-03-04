@@ -57,5 +57,35 @@ namespace Karting
         }
 
         public static List<string> AgeCategoryList = new List<string>() { "до 18", "от 18 до 29", "от 30 до 39", "от 40 до 55", "от 56 до 70", "более 70" };
+
+        public static bool RacerInCategory(int age, int CategoryNumber)
+        {
+            bool inCategory = false;
+            if (age < 18 && CategoryNumber == 0)
+            {
+                inCategory = true;
+            }
+            else if (age >= 18 && age <= 29 && CategoryNumber == 1)
+            {
+                inCategory = true;
+            }
+            else if (age >= 30 && age <= 39 && CategoryNumber == 2)
+            {
+                inCategory = true;
+            }
+            else if (age >= 40 && age <= 55 && CategoryNumber == 3)
+            {
+                inCategory = true;
+            }
+            else if (age >= 56 && age <= 70 && CategoryNumber == 4)
+            {
+                inCategory = true;
+            }
+            else if (age > 70 && CategoryNumber == 5)
+            {
+                inCategory = true;
+            }
+            return inCategory;
+        }
     }
 }

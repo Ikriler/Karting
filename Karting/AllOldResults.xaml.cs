@@ -26,7 +26,13 @@ namespace Karting
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             InitComboGender();
             InitComboEvent();
+            InitComboCategory();
             youRacer = racer;
+        }
+
+        private void InitComboCategory()
+        {
+            this.c_category.ItemsSource = MainController.AgeCategoryList;
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
@@ -38,7 +44,7 @@ namespace Karting
                 infoMainWindow.Show();
                 this.Close();
             }
-            else 
+            else
             {
                 MyResults myResults = new MyResults();
                 myResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
@@ -53,7 +59,7 @@ namespace Karting
             GenderDataTable genderRows = new GenderDataTable();
             genderTableAdapter.Fill(genderRows);
 
-            foreach(GenderRow gender in genderRows)
+            foreach (GenderRow gender in genderRows)
             {
                 this.c_gender.Items.Add(gender.Gender_Name);
             }
@@ -64,6 +70,7 @@ namespace Karting
         {
             public string YearEvent { get; set; }
             public string EventName { get; set; }
+            public int EventId { get; set; }
         }
         private void InitComboEvent()
         {
@@ -71,12 +78,14 @@ namespace Karting
             EventDataTable eventRows = new EventDataTable();
             eventTableAdapter.Fill(eventRows);
 
-            foreach(EventRow eventRow in eventRows)
+            foreach (EventRow eventRow in eventRows)
             {
                 EventData eventData = new EventData();
                 DateTime date = eventRow.StartDateTime;
+                
                 eventData.YearEvent = date.Year.ToString();
                 eventData.EventName = eventRow.Event_Name;
+                eventData.EventId = eventRow.ID_Event;
 
                 this.с_event.Items.Add(eventData);
             }
@@ -99,13 +108,111 @@ namespace Karting
                 return;
             }
 
-            if (eventView != null) 
+            if (eventView != null)
             {
                 string eventName = eventView.EventName;
                 EventRow eventRow = eventRows.Where(ev => ev.Event_Name == eventName).FirstOrDefault();
 
                 this.t_event_type.Content = "Race " + eventRow.ID_EventType;
             }
+        }
+
+        class RaceData
+        {
+            public string racerName { get; set; }
+            public int Place { get; set; }
+            public string timeRace { get; set; }
+            public string CountryName { get; set; }
+
+        }
+
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            this.raceList.Items.Clear();
+
+            string eventName = "";
+            string eventType = "";
+
+            EventTableAdapter eventTableAdapter = new EventTableAdapter();
+            EventDataTable eventRows = new EventDataTable();
+            eventTableAdapter.Fill(eventRows);
+
+            if (this.с_event.SelectedItem != null)
+            {
+                eventName = eventRows.Where(evn => evn.ID_Event.Equals((this.с_event.SelectedItem as EventData).EventId)).FirstOrDefault().Event_Name;
+                eventType = this.t_event_type.Content.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Необходимо выбрать событие.");
+                return;
+            }
+
+            string gender = "";
+            if (this.c_gender.SelectedItem != null)
+            {
+                gender = this.c_gender.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Необходимо выбрать пол.");
+                return;
+            }
+
+            int category = -1;
+            if (this.c_category.SelectedItem != null)
+            {
+                category = this.c_category.SelectedIndex;
+            }
+
+            GenderTableAdapter genderTableAdapter = new GenderTableAdapter();
+            GenderDataTable genderRows = new GenderDataTable();
+            genderTableAdapter.Fill(genderRows);
+
+            OldResultsTableAdapter oldResultsTableAdapter = new OldResultsTableAdapter();
+            OldResultsDataTable oldResultsRows = new OldResultsDataTable();
+
+
+            if (gender.Equals("Any") || gender == "")
+            {
+                oldResultsTableAdapter.FillByEventName(oldResultsRows, eventName);
+            }
+            else
+            {
+                string genderId = genderRows.Where(g => g.Gender_Name.Equals(gender)).FirstOrDefault().ID_Gender;
+                oldResultsTableAdapter.FillByEventNameAndGender(oldResultsRows, eventName, genderId);
+            }
+
+            if (category == -1)
+            {
+                foreach (OldResultsRow data in oldResultsRows)
+                {
+                    RaceData raceData = new RaceData();
+                    raceData.Place = data.BidNumber;
+                    raceData.racerName = data.First_Name + " " + data.Last_Name;
+                    raceData.timeRace = data.RaceTime.ToString();
+                    raceData.CountryName = data.Country_Name;
+                    this.raceList.Items.Add(raceData);
+                }
+            }
+            else if (category != -1)
+            {
+                foreach (OldResultsRow data in oldResultsRows)
+                {
+                    int age = Convert.ToInt32((DateTime.Today.Subtract(data.DateOfBirth)).Days / 365);
+                    if (MainController.RacerInCategory(age, category)) 
+                    {
+                        RaceData raceData = new RaceData();
+                        raceData.Place = data.BidNumber;
+                        raceData.racerName = data.First_Name + " " + data.Last_Name;
+                        raceData.timeRace = data.RaceTime.ToString();
+                        raceData.CountryName = data.Country_Name;
+                        this.raceList.Items.Add(raceData);
+                    }
+                }
+            }
+
         }
     }
 }

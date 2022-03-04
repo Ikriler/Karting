@@ -45,15 +45,15 @@
         <Label x:Name="t_event_type" FontSize="16" FontFamily="Arial" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="1,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="175" Height="30" Grid.Column="1"/>
         <ComboBox x:Name="c_category" Grid.Column="2" HorizontalAlignment="Left" Margin="92,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2"/>
         <ComboBox x:Name="c_gender" Grid.Column="2" HorizontalAlignment="Left" Margin="92,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="search" Background="#FF241D70" Content="Поиск" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="3" HorizontalAlignment="Left" Margin="44,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30"/>
-        <ListView Grid.ColumnSpan="4" Margin="1,94,-1,1" Grid.Row="2" Grid.RowSpan="3">
+        <Button x:Name="search" Click="search_Click" Background="#FF241D70" Content="Поиск" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="3" HorizontalAlignment="Left" Margin="44,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30"/>
+        <ListView Grid.ColumnSpan="4" Margin="40,94,39,1" Grid.Row="2" Grid.RowSpan="3" x:Name="raceList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Место" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Время" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Имя гонщика" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Страна" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Place}" Header="Место" Width="175"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=timeRace}" Header="Время" Width="175"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=racerName}" Header="Имя гонщика" Width="175"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=CountryName}" Header="Страна" Width="175"/>
 
                 </GridView>
             </ListView.View>
