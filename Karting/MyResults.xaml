@@ -31,19 +31,20 @@
         <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="171,49,0,1" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="215" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Text="Возрастная категория:"/>
         <Label x:Name="l_gender" FontSize="16" FontFamily="Arial" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="175,49,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="30" Grid.ColumnSpan="2"/>
         <Button x:Name="showAllRsult" Click="showAllRsult_Click" Background="#FF241D70" Content="Показать все результаты" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="1,54,0,0" Grid.Row="4" VerticalAlignment="Top" Width="395" Height="30" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <ListView Grid.ColumnSpan="4" Margin="0,94,0,56" Grid.Row="1" Grid.RowSpan="4">
+        <ListView Grid.ColumnSpan="4" x:Name="myResultList" Margin="15,94,19,56" Grid.Row="1" Grid.RowSpan="4" HorizontalContentAlignment="Center">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Событие" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Вид гонки" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Время" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Общее место" Width="160"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Место по категории" Width="160"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Событие}" Header="Событие" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=[Вид гонки]}" Header="Вид гонки" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Время}" Header="Время" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Место}" Header="Место" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=[Код гонщика]}" Header="Код гонщика" Width="150"/>
                 </GridView>
             </ListView.View>
         </ListView>
         <Label x:Name="l_age_category" FontSize="16" FontFamily="Arial" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="182,49,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="30" Grid.ColumnSpan="2" Grid.Column="2"/>
         <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="64,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
+        <!--<DataGrid x:Name="myResultGrid" HorizontalAlignment="Left" Height="235" Margin="0,89,-1,0" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Top" Width="795" Grid.ColumnSpan="4"/>-->
     </Grid>
 </Window>

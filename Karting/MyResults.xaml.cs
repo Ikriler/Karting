@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Karting.DataSetTableAdapters;
+using static Karting.DataSet;
 
 namespace Karting
 {
@@ -20,10 +22,41 @@ namespace Karting
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+            InitFields();
+            InitListMyResult();
+        }
+
+        private void InitListMyResult()
+        {
+            RacersAdditionTableAdapter racersAdditionTableAdapter = new RacersAdditionTableAdapter();
+            RacersAdditionDataTable racersAdditionRows = new RacersAdditionDataTable();
+            racersAdditionTableAdapter.Fill(racersAdditionRows);
+
+            RacerTableAdapter racerTableAdapter = new RacerTableAdapter();
+            RacerDataTable racerRows = new RacerDataTable();
+            racerTableAdapter.Fill(racerRows);
+
+            int racerId = racersAdditionRows.Where(rA => rA.UserEmail.Equals(MainController.currentUser.Email)).FirstOrDefault().RacerId;
+            RacerRow racer = racerRows.Where(r => r.ID_Racer.Equals(racerId)).FirstOrDefault();
+
+
+            MyResultTableAdapter myResultTableAdapter = new MyResultTableAdapter();
+            MyResultDataTable myResultRows = new MyResultDataTable();
+            try 
+            {
+                myResultTableAdapter.Fill(myResultRows, racerId);
+            }
+            catch
+            {
+
+            }
+
+            this.myResultList.ItemsSource = myResultRows;
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
+
             RacerPanel racerPanel = new RacerPanel();
             racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             racerPanel.Show();
@@ -44,6 +77,56 @@ namespace Karting
             allOldResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             allOldResults.Show();
             this.Close();
+        }
+
+        private void InitFields()
+        {
+            RacersAdditionTableAdapter racersAdditionTableAdapter = new RacersAdditionTableAdapter();
+            RacersAdditionDataTable racersAdditionRows = new RacersAdditionDataTable();
+            racersAdditionTableAdapter.Fill(racersAdditionRows);
+
+            RacerTableAdapter racerTableAdapter = new RacerTableAdapter();
+            RacerDataTable racerRows = new RacerDataTable();
+            racerTableAdapter.Fill(racerRows);
+
+            GenderTableAdapter genderTableAdapter = new GenderTableAdapter();
+            GenderDataTable genderRows = new GenderDataTable();
+            genderTableAdapter.Fill(genderRows);
+
+            int racerId = racersAdditionRows.Where(rA => rA.UserEmail.Equals(MainController.currentUser.Email)).FirstOrDefault().RacerId;
+            RacerRow racer = racerRows.Where(r => r.ID_Racer.Equals(racerId)).FirstOrDefault();
+
+            string gender = genderRows.Where(g => g.ID_Gender.Equals(racer.Gender)).FirstOrDefault().Gender_Name;
+            this.l_gender.Content = gender;
+
+            int age = Convert.ToInt32((DateTime.Today.Subtract(racer.DateOfBirth)).Days / 365);
+
+            string age_category = "";
+            if (age < 18)
+            {
+                age_category = MainController.AgeCategoryList[0];
+            }
+            else if (age >= 18 && age <= 29)
+            {
+                age_category = MainController.AgeCategoryList[1];
+            }
+            else if (age >= 30 && age <= 39)
+            {
+                age_category = MainController.AgeCategoryList[2];
+            }
+            else if (age >= 40 && age <= 55)
+            {
+                age_category = MainController.AgeCategoryList[3];
+            }
+            else if (age >= 56 && age <= 70)
+            {
+                age_category = MainController.AgeCategoryList[4];
+            }
+            else if (age > 70)
+            {
+                age_category = MainController.AgeCategoryList[5];
+            }
+            this.l_age_category.Content = age_category;
         }
     }
 }
