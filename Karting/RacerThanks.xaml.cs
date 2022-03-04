@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для RacerThanks.xaml
-    /// </summary>
     public partial class RacerThanks : Window
     {
         public RacerThanks()
@@ -27,13 +24,17 @@ namespace Karting
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
         private void ok_Click(object sender, RoutedEventArgs e)
         {
-            new RacerPanel().Show();
+            RacerPanel racerPanel = new RacerPanel();
+            racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerPanel.Show();
             this.Close();
         }
     }

@@ -29,5 +29,21 @@ namespace Karting
             adminPanel.Show();
             this.Close();
         }
+
+        private void printReport_Click(object sender, RoutedEventArgs e)
+        {
+            ReportPrinting reportPrinting = new ReportPrinting();
+            reportPrinting.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            reportPrinting.Show();
+            this.Close();
+        }
+
+        private void receipt_Click(object sender, RoutedEventArgs e)
+        {
+            InventoryReceipt inventoryReceipt = new InventoryReceipt();
+            inventoryReceipt.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            inventoryReceipt.Show();
+            this.Close();
+        }
     }
 }

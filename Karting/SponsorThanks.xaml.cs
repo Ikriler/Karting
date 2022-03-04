@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для SponsorThanks.xaml
-    /// </summary>
     public partial class SponsorThanks : Window
     {
         public SponsorThanks(int amount, string who)
@@ -28,7 +25,9 @@ namespace Karting
         }
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
     }

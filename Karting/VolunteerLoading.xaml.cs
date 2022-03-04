@@ -14,15 +14,20 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для VolunteerLoading.xaml
-    /// </summary>
     public partial class VolunteerLoading : Window
     {
         public VolunteerLoading()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+        }
+
+        private void cancel_Click(object sender, RoutedEventArgs e)
+        {
+            ControlVolunteer controlVolunteer = new ControlVolunteer();
+            controlVolunteer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlVolunteer.Show();
+            this.Close();
         }
     }
 }

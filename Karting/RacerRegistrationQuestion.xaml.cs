@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для RacerRegistrationQuestion.xaml
-    /// </summary>
     public partial class RacerRegistrationQuestion : Window
     {
         public RacerRegistrationQuestion()
@@ -27,19 +24,25 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
         private void answer_yes_Click(object sender, RoutedEventArgs e)
         {
-            new Login().Show();
+            Login login = new Login();
+            login.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            login.Show();
             this.Close();
         }
 
         private void answer_no_Click(object sender, RoutedEventArgs e)
         {
-            new RacerRegistration().Show();
+            RacerRegistration racerRegistration = new RacerRegistration();
+            racerRegistration.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerRegistration.Show();
             this.Close();
         }
     }

@@ -19,9 +19,6 @@ using static Karting.DataSet;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для RacerRegistration.xaml
-    /// </summary>
     public partial class RacerRegistration : Window
     {
         public RacerRegistration()
@@ -34,7 +31,9 @@ namespace Karting
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
@@ -132,8 +131,8 @@ namespace Karting
             userTableAdapter.Fill(userRows);
             racerTableAdapter.Fill(racerRows);
 
-            RacerRow racer = racerRows.Where(r => r.First_Name.Equals(name) && r.Last_Name.Equals(last_name) && r.ID_Country.Equals(countryId)).FirstOrDefault();
-            UserRow user = userRows.Where(u => u.Email.Equals(email)).FirstOrDefault();
+            RacerRow racer = racerRows.Where(r => r.First_Name.Equals(name) && r.Last_Name.Equals(last_name) && r.ID_Country.Equals(countryId)).LastOrDefault();
+            UserRow user = userRows.Where(u => u.Email.Equals(email)).LastOrDefault();
 
             string[] photo_path_params = photo_path.Split('.');
             string newPhotoName = Guid.NewGuid() + "." + photo_path_params[photo_path_params.Length - 1];
@@ -146,7 +145,9 @@ namespace Karting
                 racersAdditionTableAdapter.RacerAdditionInsertQuery(user.Email, racer.ID_Racer, newPhotoName);
                 MessageBox.Show("Пользователь успешно создан.");
                 MainController.AuthorizeCurrentUser(user);
-                new RegistrationOnRace().Show();
+                RegistrationOnRace registrationOnRace = new RegistrationOnRace();
+                registrationOnRace.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                registrationOnRace.Show();
                 this.Close();
             }
             else 

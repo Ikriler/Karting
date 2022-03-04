@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для Map.xaml
-    /// </summary>
     public partial class Map : Window
     {
         public Map()
@@ -27,7 +24,9 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new InfoKartSkills().Show();
+            InfoKartSkills infoKartSkills = new InfoKartSkills();
+            infoKartSkills.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            infoKartSkills.Show();
             this.Close();
         }
     }

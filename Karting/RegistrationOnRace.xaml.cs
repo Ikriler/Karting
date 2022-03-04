@@ -38,13 +38,17 @@ namespace Karting
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            new RacerPanel().Show();
+            RacerPanel racerPanel = new RacerPanel();
+            racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerPanel.Show();
             this.Close();
         }
 
         private void logout_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
@@ -123,7 +127,9 @@ namespace Karting
 
             registrationTableAdapter.Insert(racerId, DateTime.Today, 1, amount, organisationId, organisationCost);
 
-            new RacerThanks().Show();
+            RacerThanks racerThanks = new RacerThanks();
+            racerThanks.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            racerThanks.Show();
             this.Close();
         }
     }

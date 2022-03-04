@@ -44,7 +44,7 @@
         </ListView>
         <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="59,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="81,39,0,31" Grid.Row="2" TextWrapping="Wrap" Text="Всего волонтеров: 10" TextAlignment="Center" FontFamily="Arial" Width="225" FontSize="18" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <Button x:Name="search_Copy" Background="#FF241D70" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="50" Grid.ColumnSpan="2">
+        <Button x:Name="loadVolunteers" Click="loadVolunteers_Click" Background="#FF241D70" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,24,0,0" Grid.Row="2" VerticalAlignment="Top" Width="170" Height="50" Grid.ColumnSpan="2">
             <TextBlock Text="Загрузка волонтеров" TextWrapping="Wrap" TextAlignment="Center"/>
         </Button>
     </Grid>

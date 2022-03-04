@@ -34,7 +34,9 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new InfoMainWindow().Show();
+            InfoMainWindow infoMainWindow = new InfoMainWindow();
+            infoMainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            infoMainWindow.Show();
             this.Close();
         }
 

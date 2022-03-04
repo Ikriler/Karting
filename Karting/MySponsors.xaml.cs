@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для MySponsors.xaml
-    /// </summary>
     public partial class MySponsors : Window
     {
         public MySponsors()
@@ -30,6 +27,14 @@ namespace Karting
             RacerPanel racerPanel = new RacerPanel();
             racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             racerPanel.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
     }

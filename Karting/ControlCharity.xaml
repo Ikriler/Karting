@@ -27,7 +27,7 @@
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
-        <Button x:Name="search" Background="#FF241D70" Content="+ Добавить нового" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="65,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="addNewCharity" Click="addNewCharity_Click" Background="#FF241D70" Content="+ Добавить нового" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="65,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <ListView Grid.ColumnSpan="4" Margin="1,44,-1,1" Grid.Row="2" Grid.RowSpan="3">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">

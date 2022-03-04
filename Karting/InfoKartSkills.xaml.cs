@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для InfoKartSkills.xaml
-    /// </summary>
     public partial class InfoKartSkills : Window
     {
         public InfoKartSkills()
@@ -27,13 +24,17 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new InfoMainWindow().Show();
+            InfoMainWindow infoMainWindow = new InfoMainWindow();
+            infoMainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            infoMainWindow.Show();
             this.Close();
         }
 
         private void map_Click(object sender, RoutedEventArgs e)
         {
-            new Map().Show();
+            Map map = new Map();
+            map.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            map.Show();
             this.Close();
         }
 

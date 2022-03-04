@@ -37,5 +37,13 @@ namespace Karting
             mainWindow.Show();
             this.Close();
         }
+
+        private void addNewCharity_Click(object sender, RoutedEventArgs e)
+        {
+            AddOrEditCharity addOrEditCharity = new AddOrEditCharity();
+            addOrEditCharity.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            addOrEditCharity.Show();
+            this.Close();
+        }
     }
 }

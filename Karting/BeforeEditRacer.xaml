@@ -24,20 +24,20 @@
         <Label Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="4" Background="#00903e" Margin="0,0,0,-1" Name="textBlock_DayXChanger" HorizontalContentAlignment="Center" Foreground="#FFEBEBEB" FontSize="18" VerticalContentAlignment="Center"/>
         <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5">
         </Label>
-        <Button x:Name="back" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="30,25,64,36"/>
+        <Button x:Name="back" Click="back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="30,25,64,36"/>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <TextBlock x:Name="t_email" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,51,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="t_pass" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,84,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
         <TextBlock x:Name="t_rePass" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,21,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="Cancel" Background="#FF241D70" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="34,29,14,11" Grid.Column="3" Grid.Row="4">
+        <Button x:Name="coordEditRacer" Click="coordEditRacer_Click" Background="#FF241D70" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="34,29,14,11" Grid.Column="3" Grid.Row="4">
             <TextBlock Text="Редактирование профиля" TextWrapping="Wrap" TextAlignment="Center"/>
         </Button>
         <Label x:Name="label" FontFamily="Arial" FontSize="16"  Content="Email:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,49,0,0" Grid.Row="1" Width="58" Height="25"/>
         <Label x:Name="label_Copy" FontFamily="Arial" FontSize="16"  Content="Имя:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,79,0,0" Grid.Row="1" Width="45" Height="30" Grid.RowSpan="2"/>
         <Label x:Name="label_Copy1" FontFamily="Arial" FontSize="16"  Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="110,19,0,0" Grid.Row="2" Width="85" Height="30"/>
         <Image x:Name="photo_img" Grid.Column="1" HorizontalAlignment="Left" Height="225" Margin="166,49,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="170" Grid.ColumnSpan="2"/>
-        <Button x:Name="back_Copy" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="69,25,19,36" Grid.Column="3"/>
+        <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="69,25,19,36" Grid.Column="3"/>
         <Label x:Name="label_Copy5" FontFamily="Arial" FontSize="16"  Content="Управление гонщиком" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="113,95,0,0" Width="178" Height="30" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2"/>
         <TextBlock x:Name="t_email_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,54,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBlock x:Name="t_pass_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,87,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>

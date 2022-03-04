@@ -14,15 +14,36 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для BeforeEditRacer.xaml
-    /// </summary>
     public partial class BeforeEditRacer : Window
     {
         public BeforeEditRacer()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+        }
+
+        private void back_Click(object sender, RoutedEventArgs e)
+        {
+            ControlRacers controlRacers = new ControlRacers();
+            controlRacers.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlRacers.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void coordEditRacer_Click(object sender, RoutedEventArgs e)
+        {
+            CoordinatorEditRacer coordinatorEditRacer = new CoordinatorEditRacer(this.t_email.Text);
+            coordinatorEditRacer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            coordinatorEditRacer.Show();
+            this.Close();
         }
     }
 }

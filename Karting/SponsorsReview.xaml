@@ -41,7 +41,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="logout" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="59,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
+        <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="59,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
         <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="0,19,-1,51" Grid.Row="2" TextWrapping="Wrap" Text="Благотворительные организации: 10" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
         <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="0,44,-1,26" Grid.Row="2" TextWrapping="Wrap" Text="Всего спонсорских взносов: $10000" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
     </Grid>

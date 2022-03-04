@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для MyResults.xaml
-    /// </summary>
     public partial class MyResults : Window
     {
         public MyResults()
@@ -30,6 +27,22 @@ namespace Karting
             RacerPanel racerPanel = new RacerPanel();
             racerPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             racerPanel.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
+            this.Close();
+        }
+
+        private void showAllRsult_Click(object sender, RoutedEventArgs e)
+        {
+            AllOldResults allOldResults = new AllOldResults();
+            allOldResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            allOldResults.Show();
             this.Close();
         }
     }

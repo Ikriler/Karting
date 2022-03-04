@@ -14,15 +14,20 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для EditUser.xaml
-    /// </summary>
     public partial class EditUser : Window
     {
         public EditUser()
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            ControlUsers controlUsers = new ControlUsers();
+            controlUsers.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlUsers.Show();
+            this.Close();
         }
     }
 }

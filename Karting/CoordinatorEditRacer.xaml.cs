@@ -16,10 +16,18 @@ namespace Karting
 {
     public partial class CoordinatorEditRacer : Window
     {
-        public CoordinatorEditRacer()
+        public CoordinatorEditRacer(string email = "")
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            BeforeEditRacer beforeEditRacer = new BeforeEditRacer();
+            beforeEditRacer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            beforeEditRacer.Show();
+            this.Close();
         }
     }
 }

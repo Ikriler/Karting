@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для SponsorsReview.xaml
-    /// </summary>
     public partial class SponsorsReview : Window
     {
         public SponsorsReview()
@@ -30,6 +27,14 @@ namespace Karting
             CoordinatorPanel coordinatorPanel = new CoordinatorPanel();
             coordinatorPanel.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             coordinatorPanel.Show();
+            this.Close();
+        }
+
+        private void logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
     }

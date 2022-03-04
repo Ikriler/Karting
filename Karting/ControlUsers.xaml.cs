@@ -37,5 +37,13 @@ namespace Karting
             mainWindow.Show();
             this.Close();
         }
+
+        private void addNewUser_Click(object sender, RoutedEventArgs e)
+        {
+            AddNewUser addNewUser = new AddNewUser();
+            addNewUser.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            addNewUser.Show();
+            this.Close();
+        }
     }
 }

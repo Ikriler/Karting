@@ -37,5 +37,13 @@ namespace Karting
             mainWindow.Show();
             this.Close();
         }
+
+        private void loadVolunteers_Click(object sender, RoutedEventArgs e)
+        {
+            VolunteerLoading volunteerLoading = new VolunteerLoading();
+            volunteerLoading.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            volunteerLoading.Show();
+            this.Close();
+        }
     }
 }

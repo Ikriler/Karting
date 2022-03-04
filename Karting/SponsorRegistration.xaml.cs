@@ -17,9 +17,6 @@ using static Karting.DataSet;
 
 namespace Karting
 {
-    /// <summary>
-    /// Логика взаимодействия для SponsorRegistration.xaml
-    /// </summary>
     public partial class SponsorRegistration : Window
     {
         public SponsorRegistration()
@@ -45,7 +42,9 @@ namespace Karting
 
         private void back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
@@ -141,10 +140,11 @@ namespace Karting
             #endregion
 
 
-            
-            //do something
 
-            new SponsorThanks(amount, who).Show();
+            //do something
+            SponsorThanks sponsorThanks = new SponsorThanks(amount, who);
+            sponsorThanks.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            sponsorThanks.Show();
             this.Close();
         }
     }

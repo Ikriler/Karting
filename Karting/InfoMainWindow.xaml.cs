@@ -24,25 +24,33 @@ namespace Karting
 
         private void go_back_Click(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            mainWindow.Show();
             this.Close();
         }
 
         private void kartSkills2017_Click(object sender, RoutedEventArgs e)
         {
-            new InfoKartSkills().Show();
+            InfoKartSkills infoKartSkills = new InfoKartSkills();
+            infoKartSkills.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            infoKartSkills.Show();
             this.Close();
         }
 
         private void SpisokOrganiztion_Click(object sender, RoutedEventArgs e)
         {
-            new CharityList().Show();
+            CharityList charityList = new CharityList();
+            charityList.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            charityList.Show();
             this.Close();
         }
 
         private void oldResults_Click(object sender, RoutedEventArgs e)
         {
-            new AllOldResults().Show();
+            AllOldResults allOldResults = new AllOldResults();
+            allOldResults.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            allOldResults.Show();
             this.Close();
         }
     }

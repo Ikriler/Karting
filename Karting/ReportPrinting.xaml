@@ -26,7 +26,7 @@
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextAlignment="Center" Margin="71,44,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="260" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Text="Печать отчета"/>
-        <Button x:Name="go_back_Copy" Background="#FF241D70" Content="Отмена" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="146,44,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button x:Name="cancel" Click="cancel_Click" Background="#FF241D70" Content="Отмена" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="146,44,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2"/>
         <ListView x:Name="listView" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="240" Margin="90,0,0,61" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="620">
             <ListView.View>
                 <GridView>

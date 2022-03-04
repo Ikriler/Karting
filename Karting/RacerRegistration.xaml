@@ -49,5 +49,6 @@
         <Label x:Name="label_Copy7" FontFamily="Arial" FontSize="16"  Content="Страна:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="82,89,0,0" Grid.Row="3" Width="113" Height="30" Grid.Column="2" Grid.RowSpan="2"/>
         <Image x:Name="photo_img" Grid.Column="3" HorizontalAlignment="Left" Height="145" Margin="14,29,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="105"/>
         <TextBox x:Name="textbox_photo_path" FontFamily="Arial" FontSize="16" HorizontalScrollBarVisibility="Visible"  IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="84,94,0,0" Grid.Row="2" Width="113" Height="50" Grid.Column="2" Grid.RowSpan="2"/>
+        <Label x:Name="label_Copy8" FontFamily="Arial" FontSize="22" HorizontalContentAlignment="Center" Content="Регистрация гонщиков" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="56,95,0,0" Width="288" Height="40" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2"/>
     </Grid>
 </Window>
