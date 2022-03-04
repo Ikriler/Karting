@@ -73,6 +73,9 @@
     <Compile Include="CharityList.xaml.cs">
       <DependentUpon>CharityList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ContactCard.xaml.cs">
+      <DependentUpon>ContactCard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ControlCharity.xaml.cs">
       <DependentUpon>ControlCharity.xaml</DependentUpon>
     </Compile>
@@ -174,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ContactCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -347,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Image\kart-skill-2017-map-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
