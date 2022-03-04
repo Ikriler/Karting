@@ -25,9 +25,42 @@ namespace Karting
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             InitComboGender();
+            InitTInfo();
             InitComboEvent();
             InitComboCategory();
             youRacer = racer;
+        }
+
+        private void InitTInfo()
+        {
+            RacerTableAdapter racerTableAdapter = new RacerTableAdapter();
+            RacerDataTable racerRows = new RacerDataTable();
+            racerTableAdapter.Fill(racerRows);
+
+            int racerCount = racerRows.Count();
+
+            ResultTableAdapter resultTableAdapter = new ResultTableAdapter();
+            ResultDataTable resultRows = new ResultDataTable();
+            resultTableAdapter.Fill(resultRows);
+
+            TimeSpan commonTime = new TimeSpan();
+            List<int> registrationIdList = new List<int>();
+
+            foreach (ResultRow result in resultRows)
+            {
+                commonTime += result.RaceTime;
+                if(!registrationIdList.Contains(result.ID_Registration))
+                {
+                    registrationIdList.Add(result.ID_Registration);
+                }
+            }
+
+            int allFinished = registrationIdList.Count();
+
+            TimeSpan middleTime = new TimeSpan(commonTime.Ticks / resultRows.Count());
+
+            this.t_info.Text = String.Format("Всего пилотов: {0} Всего пилотов финишировало: {1} Среднее время: {2}m {3}s", racerCount, allFinished, middleTime.Minutes, middleTime.Seconds);
+
         }
 
         private void InitComboCategory()
@@ -212,6 +245,14 @@ namespace Karting
                     }
                 }
             }
+
+            Application.Current.Dispatcher.InvokeAsync(async () =>
+            {
+                AlarmWindow alarm = new AlarmWindow("Поиск");
+                alarm.Show();
+                await Task.Delay(1000);
+                alarm.Close();
+            });
 
         }
     }

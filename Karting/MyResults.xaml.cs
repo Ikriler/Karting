@@ -53,7 +53,13 @@ namespace Karting
 
             if(myResultRows.Count == 0)
             {
-                MessageBox.Show("Вы еще не участвовали в гонках.");
+                Application.Current.Dispatcher.InvokeAsync(async () =>
+                {
+                    AlarmWindow alarm = new AlarmWindow("Поиск");
+                    alarm.Show();
+                    await Task.Delay(1000);
+                    alarm.Close();
+                });
             }
 
             this.myResultList.ItemsSource = myResultRows;

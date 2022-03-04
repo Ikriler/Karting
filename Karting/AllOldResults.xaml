@@ -27,11 +27,11 @@
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="0,94,0,51" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="195" FontSize="18" Grid.RowSpan="2"><Run Text="Событие"/><Run Text=":"/></TextBlock>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="0,49,0,1" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="195" FontSize="18"><Run Text="Тип гонки"/><Run Text=":"/></TextBlock>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="196,94,0,51" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="95" FontSize="18" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"><Run Text="Пол"/><Run Text=":"/></TextBlock>
-        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="191,49,0,1" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="100" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"><Run Text="Категория"/><Run Text=":"/></TextBlock>
-        <ComboBox x:Name="с_event" Grid.Column="1" HorizontalAlignment="Left" Margin="1,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="30" Grid.RowSpan="2" SelectionChanged="с_event_SelectionChanged">
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="0,49,0,1" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="195" FontSize="18"><Run Text="Событие"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="0,4,0,46" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="195" FontSize="18"><Run Text="Тип гонки"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="196,49,0,1" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="95" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"><Run Text="Пол"/><Run Text=":"/></TextBlock>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Margin="191,4,0,46" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="100" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2"><Run Text="Категория"/><Run Text=":"/></TextBlock>
+        <ComboBox x:Name="с_event" Grid.Column="1" HorizontalAlignment="Left" Margin="1,49,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="30" SelectionChanged="с_event_SelectionChanged">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <TextBlock>
@@ -42,10 +42,10 @@
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
-        <Label x:Name="t_event_type" FontSize="16" FontFamily="Arial" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="1,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="175" Height="30" Grid.Column="1"/>
-        <ComboBox x:Name="c_category" Grid.Column="2" HorizontalAlignment="Left" Margin="92,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="c_gender" Grid.Column="2" HorizontalAlignment="Left" Margin="92,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="search" Click="search_Click" Background="#FF241D70" Content="Поиск" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="3" HorizontalAlignment="Left" Margin="44,44,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30"/>
+        <Label x:Name="t_event_type" FontSize="16" FontFamily="Arial" HorizontalContentAlignment="Center" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="1,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Height="30" Grid.Column="1" Grid.RowSpan="2"/>
+        <ComboBox x:Name="c_category" Grid.Column="2" HorizontalAlignment="Left" Margin="92,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ComboBox x:Name="c_gender" Grid.Column="2" HorizontalAlignment="Left" Margin="92,49,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2"/>
+        <Button x:Name="search" Click="search_Click" Background="#FF241D70" Content="Поиск" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="3" HorizontalAlignment="Left" Margin="44,94,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.RowSpan="2"/>
         <ListView Grid.ColumnSpan="4" Margin="40,94,39,1" Grid.Row="2" Grid.RowSpan="3" x:Name="raceList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
@@ -58,5 +58,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <TextBlock x:Name="t_info" HorizontalAlignment="Left" Margin="-10,44,-1,6" Grid.Row="2" TextWrapping="Wrap" Text="Результаты предыдущих гонок" TextAlignment="Center" FontFamily="Arial" Height="45" Width="805" FontSize="18" Grid.ColumnSpan="4"/>
     </Grid>
 </Window>
