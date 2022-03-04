@@ -61,8 +61,20 @@
     <Compile Include="AllOldResults.xaml.cs">
       <DependentUpon>AllOldResults.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BeforeEditRacer.xaml.cs">
+      <DependentUpon>BeforeEditRacer.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CharityList.xaml.cs">
       <DependentUpon>CharityList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCharity.xaml.cs">
+      <DependentUpon>ControlCharity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ControlRacers.xaml.cs">
+      <DependentUpon>ControlRacers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorEditRacer.xaml.cs">
+      <DependentUpon>CoordinatorEditRacer.xaml</DependentUpon>
     </Compile>
     <Compile Include="CoordinatorPanel.xaml.cs">
       <DependentUpon>CoordinatorPanel.xaml</DependentUpon>
@@ -122,7 +134,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="BeforeEditRacer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CharityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlCharity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlRacers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoordinatorEditRacer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -40,5 +40,13 @@ namespace Karting
             sponsorsReview.Show();
             this.Close();
         }
+
+        private void racers_Click(object sender, RoutedEventArgs e)
+        {
+            ControlRacers controlRacers = new ControlRacers();
+            controlRacers.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            controlRacers.Show();
+            this.Close();
+        }
     }
 }
