@@ -41,7 +41,7 @@
                     <GridViewColumn Header="Edit" Width="128">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Edit" x:Name="b_edit" Width="100" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=email}"></Button>
+                                <Button Content="Edit" Click="b_edit_Click" x:Name="b_edit" Width="100" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=email}"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

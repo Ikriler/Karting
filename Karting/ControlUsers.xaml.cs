@@ -194,5 +194,14 @@ namespace Karting
 
             InitUsersListWithParameters(filter, sort, search);
         }
+
+        private void b_edit_Click(object sender, RoutedEventArgs e)
+        {
+            string userEmail = (sender as Button).Tag.ToString();
+            EditUser editUser = new EditUser(userEmail);
+            editUser.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            editUser.Show();
+            this.Close();
+        }
     }
 }
