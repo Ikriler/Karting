@@ -16,7 +16,7 @@ namespace Karting
 {
     public partial class EditUser : Window
     {
-        public EditUser()
+        public EditUser(string userEmail = "")
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);

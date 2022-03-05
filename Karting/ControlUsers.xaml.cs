@@ -83,7 +83,7 @@ namespace Karting
                 users = userRows.Where(u => u.ID_Role.Equals(roleId)).ToList();
             }
 
-            if (sort != "")
+            if (sort != "" && sort != "Без сортировки")
             {
                 switch (sort)
                 {
@@ -149,6 +149,7 @@ namespace Karting
             this.c_sort.Items.Add("Фамилия");
             this.c_sort.Items.Add("Email");
             this.c_sort.Items.Add("Роль");
+            this.c_sort.Items.Add("Без сортировки");
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)
