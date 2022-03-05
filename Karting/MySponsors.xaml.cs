@@ -24,6 +24,7 @@ namespace Karting
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
             InitSponsorList();
+            InitCharityInfo();
         }
 
         private void InitSponsorList()
@@ -61,6 +62,47 @@ namespace Karting
             }
 
             this.t_commot_amount.Text = "$ " + commonAmount;
+        }
+
+
+        private void InitCharityInfo()
+        {
+            RacersAdditionTableAdapter racersAdditionTableAdapter = new RacersAdditionTableAdapter();
+            RacersAdditionDataTable racersAdditionRows = new RacersAdditionDataTable();
+            racersAdditionTableAdapter.Fill(racersAdditionRows);
+
+            int racerId = racersAdditionRows.Where(rA => rA.UserEmail.Equals(MainController.currentUser.Email)).FirstOrDefault().RacerId;
+
+            RegistrationTableAdapter registrationTableAdapter = new RegistrationTableAdapter();
+            RegistrationDataTable registrationRows = new RegistrationDataTable();
+            registrationTableAdapter.Fill(registrationRows);
+
+            RegistrationRow registrationRow = registrationRows.Where(rr => rr.ID_Racer.Equals(racerId)).LastOrDefault();
+
+            if (registrationRow == null)
+            {
+                MessageBox.Show("Вы еще не регистрировались в гонке.");
+                this.t_charity_name.Text = "";
+                this.t_charity_description.Text = "";
+                return;
+            }
+
+            int id_charity = registrationRow.ID_Charity;
+
+            CharityTableAdapter charityTableAdapter = new CharityTableAdapter();
+            CharityDataTable charityRows = new CharityDataTable();
+            charityTableAdapter.Fill(charityRows);
+
+            CharityRow charityRow = charityRows.Where(cr => cr.ID_Сharity.Equals(id_charity)).FirstOrDefault();
+
+            var uriImageSource = new Uri(MainController.IconPath + charityRow.Charity_Logo, UriKind.RelativeOrAbsolute);
+            ImageSource image = new BitmapImage(uriImageSource);
+            this.charity_icon.Source = image;
+
+            this.t_charity_name.Text = charityRow.Charity_Name;
+
+
+            this.t_charity_description.Text = charityRow.Charity_Description;
         }
 
         class Sponsor 
