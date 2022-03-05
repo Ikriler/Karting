@@ -27,16 +27,33 @@
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
-        <Button x:Name="addNewCharity" Click="addNewCharity_Click" Background="#FF241D70" Content="+ Добавить нового" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="65,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <ListView Grid.ColumnSpan="4" Margin="1,44,-1,1" Grid.Row="2" Grid.RowSpan="3">
+        <Button x:Name="addNewCharity" Click="addNewCharity_Click" Background="#FF241D70" Content="+ Добавить нового" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="65,54,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Height="30" Grid.ColumnSpan="2"/>
+        <ListView Grid.ColumnSpan="4" Margin="25,9,14,1" Grid.Row="2" Grid.RowSpan="3" x:Name="charityList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Лого" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Наименование" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Описание" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Edit" Width="200"/>
-
+                    <GridViewColumn Header="Лого" Width="140">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=ImagePath}" Height="130" Width="130"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=CharityName}" Header="Наименование" Width="190"/>
+                    <GridViewColumn Header="Описание" Width="190">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Path=CharityDescription}" FontFamily="Arial" FontSize="12" TextWrapping="Wrap"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Edit" Width="190">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" x:Name="b_edit" Click="b_edit_Click" Width="180" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=CharityName}"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
