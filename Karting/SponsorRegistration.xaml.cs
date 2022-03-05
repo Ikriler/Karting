@@ -157,6 +157,11 @@ namespace Karting
                 MessageBox.Show("Неправильный номер карты.");
                 return;
             }
+            if (cardMonth.Count() < 1)
+            {
+                MessageBox.Show("Неправильный месяц срока действия.");
+                return;
+            }
             if (Convert.ToInt32(cardMonth) <=0 || Convert.ToInt32(cardMonth) > 12)
             {
                 MessageBox.Show("Неправильный месяц срока действия.");
