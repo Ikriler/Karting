@@ -108,11 +108,17 @@ namespace Karting
 
             this.c_country.SelectedItem = country;
 
-            this.textbox_photo_path.Text = MainController.IconPath + racersAdditionRow.PhotoPath;
+            try 
+            {
+                this.textbox_photo_path.Text = MainController.IconPath + racersAdditionRow.PhotoPath;
+                var uriImageSource = new Uri(MainController.IconPath + racersAdditionRow.PhotoPath, UriKind.RelativeOrAbsolute);
+                ImageSource image = new BitmapImage(uriImageSource);
+                this.photo_img.Source = image;
+            }
+            catch
+            {
 
-            var uriImageSource = new Uri(MainController.IconPath + racersAdditionRow.PhotoPath, UriKind.RelativeOrAbsolute);
-            ImageSource image = new BitmapImage(uriImageSource);
-            this.photo_img.Source = image;
+            }
 
             this.dp_bd.SelectedDate = currentRacer.DateOfBirth;
         }
