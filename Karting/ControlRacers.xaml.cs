@@ -115,7 +115,14 @@ namespace Karting
             RacersAdditionDataTable racersAdditionRows = new RacersAdditionDataTable();
             racersAdditionTableAdapter.Fill(racersAdditionRows);
 
-            List<RegistrationRow> registrationRowsList = registrationRows.ToList();
+            List<RegistrationRow> registrationRowsList = new List<RegistrationRow>();
+            foreach (RegistrationRow row in registrationRows.Reverse())
+            {
+                if(registrationRowsList.Where(rl => rl.ID_Racer.Equals(row.ID_Racer)).Count() == 0)
+                {
+                    registrationRowsList.Add(row);
+                }
+            }
 
             if(eventTypeFilter != "" && eventTypeFilter != "Без фильтра")
             {

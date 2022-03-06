@@ -94,6 +94,8 @@ namespace Karting
 
                 this.volunteerList.Items.Add(volunteerData);
             }
+
+            this.t_volunteer_count.Text = "Всего волонтеров: " + volunteerRowsList.Count();
         }
 
         private void go_back_Click(object sender, RoutedEventArgs e)

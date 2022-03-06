@@ -16,15 +16,17 @@ namespace Karting
 {
     public partial class CoordinatorEditRacer : Window
     {
+        string currentEditRacerEmail = "";
         public CoordinatorEditRacer(string email = "")
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+            currentEditRacerEmail = email;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            BeforeEditRacer beforeEditRacer = new BeforeEditRacer();
+            BeforeEditRacer beforeEditRacer = new BeforeEditRacer(currentEditRacerEmail);
             beforeEditRacer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             beforeEditRacer.Show();
             this.Close();
