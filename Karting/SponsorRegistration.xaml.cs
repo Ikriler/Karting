@@ -177,10 +177,15 @@ namespace Karting
                 MessageBox.Show("Неправильный CVC.");
                 return;
             }
+            string charityName = "";
             if(this.l_charity.SelectedItem == null)
             {
                 MessageBox.Show("Не выбрана благотворительная организация");
                 return;
+            }
+            else
+            {
+                charityName = (this.l_charity.SelectedItem as DataRowView)["Charity_Name"].ToString();
             }
 
             #endregion
@@ -196,13 +201,19 @@ namespace Karting
             RacerSponsorConnectorDataTable racerSponsorConnectorRows = new RacerSponsorConnectorDataTable();
             racerSponsorConnectorTableAdapter.Fill(racerSponsorConnectorRows);
 
+            CharityTableAdapter charityTableAdapter = new CharityTableAdapter();
+            CharityDataTable charityRows = new CharityDataTable();
+            charityTableAdapter.Fill(charityRows);
+
             sponsorshipTableAdapter.Insert(yourName, amount);
             sponsorshipTableAdapter.Fill(sponsorshipRows);
 
             int racerId = Convert.ToInt32(racer["ID_Racer"]);
             SponsorshipRow sponsor = sponsorshipRows.Where(s => s.SponsorName.Equals(yourName)).LastOrDefault();
 
-            racerSponsorConnectorTableAdapter.Insert(racerId, sponsor.ID_Sponsorship);
+            int charityId = charityRows.Where(c => c.Charity_Name.Equals(charityName)).FirstOrDefault().ID_Сharity;
+
+            racerSponsorConnectorTableAdapter.Insert(racerId, sponsor.ID_Sponsorship, charityId);
 
             string CharityName = (this.l_charity.SelectedItem as DataRowView)["Charity_Name"].ToString();
 

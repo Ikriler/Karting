@@ -34,11 +34,17 @@
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Имя" Width="130"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Фамилия" Width="150"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Email" Width="180"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Статус" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Status}" Header="Edit" Width="128"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=firstName}" Header="Имя" Width="130"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lastName}" Header="Фамилия" Width="150"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=email}" Header="Email" Width="180"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=status}" Header="Статус" Width="200"/>
+                    <GridViewColumn Header="Edit" Width="128">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" x:Name="b_edit" Width="100" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=email}"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
 
                 </GridView>
             </ListView.View>

@@ -29,17 +29,39 @@ namespace Karting
 
         private void InitSponsorList()
         {
-            RacerSponsorConnectorTableAdapter racerSponsorConnectorTableAdapter = new RacerSponsorConnectorTableAdapter();
-            RacerSponsorConnectorDataTable racerSponsorConnectorRows = new RacerSponsorConnectorDataTable();
-            racerSponsorConnectorTableAdapter.Fill(racerSponsorConnectorRows);
-
             RacersAdditionTableAdapter racersAdditionTableAdapter = new RacersAdditionTableAdapter();
             RacersAdditionDataTable racersAdditionRows = new RacersAdditionDataTable();
             racersAdditionTableAdapter.Fill(racersAdditionRows);
 
             int racerId = racersAdditionRows.Where(rA => rA.UserEmail.Equals(MainController.currentUser.Email)).FirstOrDefault().RacerId;
 
-            List<RacerSponsorConnectorRow> racerSponsorConnectorRowsList = racerSponsorConnectorRows.Where(rsc => rsc.RacerId.Equals(racerId)).ToList();
+            RegistrationTableAdapter registrationTableAdapter = new RegistrationTableAdapter();
+            RegistrationDataTable registrationRows = new RegistrationDataTable();
+            registrationTableAdapter.Fill(registrationRows);
+
+            RegistrationRow registrationRow = registrationRows.Where(rr => rr.ID_Racer.Equals(racerId)).LastOrDefault();
+
+            if (registrationRow == null)
+            {
+                MessageBox.Show("Вы еще не регистрировались в гонке.");
+                this.t_charity_name.Text = "";
+                this.t_charity_description.Text = "";
+                return;
+            }
+
+            int id_charity = registrationRow.ID_Charity;
+
+            CharityTableAdapter charityTableAdapter = new CharityTableAdapter();
+            CharityDataTable charityRows = new CharityDataTable();
+            charityTableAdapter.Fill(charityRows);
+
+            CharityRow charityRow = charityRows.Where(cr => cr.ID_Сharity.Equals(id_charity)).FirstOrDefault();
+
+            RacerSponsorConnectorTableAdapter racerSponsorConnectorTableAdapter = new RacerSponsorConnectorTableAdapter();
+            RacerSponsorConnectorDataTable racerSponsorConnectorRows = new RacerSponsorConnectorDataTable();
+            racerSponsorConnectorTableAdapter.Fill(racerSponsorConnectorRows);
+
+            List<RacerSponsorConnectorRow> racerSponsorConnectorRowsList = racerSponsorConnectorRows.Where(rsc => rsc.RacerId.Equals(racerId) && rsc.CharityId.Equals(id_charity)).ToList();
 
             SponsorshipTableAdapter sponsorshipTableAdapter = new SponsorshipTableAdapter();
             SponsorshipDataTable sponsorshipRows = new SponsorshipDataTable();
