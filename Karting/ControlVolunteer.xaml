@@ -28,16 +28,16 @@
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="130,79,0,66" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="150" FontSize="18" Grid.RowSpan="2" Grid.ColumnSpan="2"><Run Text="Отсортировать"/><Run Text=":"/></TextBlock>
-        <ComboBox x:Name="c_gender" Grid.Column="1" HorizontalAlignment="Left" Margin="86,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="search" Background="#FF241D70" Content="Сортировка" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <ListView Grid.ColumnSpan="4" Margin="1,84,-1,1" Grid.Row="2" Grid.RowSpan="3">
+        <ComboBox x:Name="c_sort" Grid.Column="1" HorizontalAlignment="Left" Margin="86,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="b_sort" Click="b_sort_Click" Background="#FF241D70" Content="Сортировка" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ListView Grid.ColumnSpan="4" Margin="1,84,-1,1" Grid.Row="2" Grid.RowSpan="3" x:Name="volunteerList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Фамилия" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Имя" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Страна" Width="200"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Пол" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lastName}" Header="Фамилия" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=firstName}" Header="Имя" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=countryName}" Header="Страна" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=genderName}" Header="Пол" Width="200"/>
 
                 </GridView>
             </ListView.View>
