@@ -26,9 +26,9 @@
         </Label>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
-        <Button x:Name="EditConfirm" Background="#FF241D70" Content="Сохранить" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="31,44,38,16" Grid.Column="1" Grid.Row="4"/>
-        <Button x:Name="CheckPhoto" Background="#FF241D70" Content="Просмотр" FontFamily="Arial" FontSize="15" Foreground="#FFEBEBEB" Margin="19,14,74,56" Grid.Column="3" Grid.Row="3"/>
-        <Label x:Name="l_email" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,51,0,0" Grid.Row="1" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="EditConfirm" Click="EditConfirm_Click" Background="#FF241D70" Content="Сохранить" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Margin="31,44,38,16" Grid.Column="1" Grid.Row="4"/>
+        <Button x:Name="CheckPhoto" Click="CheckPhoto_Click" Background="#FF241D70" Content="Просмотр" FontFamily="Arial" FontSize="15" Foreground="#FFEBEBEB" Margin="19,14,74,56" Grid.Column="3" Grid.Row="3"/>
+        <Label x:Name="l_email" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="1,51,0,0" Grid.Row="1" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="t_pass" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="t_rePass" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,49,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="t_name" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="1,1,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
@@ -49,7 +49,7 @@
         <Image x:Name="photo_img" Grid.Column="3" HorizontalAlignment="Left" Height="145" Margin="14,29,0,0" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Top" Width="105"/>
         <TextBox x:Name="textbox_photo_path" FontFamily="Arial" FontSize="16" HorizontalScrollBarVisibility="Visible"  IsReadOnly="True" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="84,94,0,0" Grid.Row="2" Width="113" Height="50" Grid.Column="2" Grid.RowSpan="2"/>
         <Label x:Name="label_Copy8" FontFamily="Arial" FontSize="16" HorizontalContentAlignment="Center"  Content="Редактирование профиля гонщика" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,4,0,0" Grid.Row="1" Width="395" Height="30" Grid.Column="1" Grid.ColumnSpan="2"/>
-        <ComboBox x:Name="c_gender_Copy" HorizontalAlignment="Left" Height="20" Margin="15,64,0,0" Grid.Row="4" VerticalAlignment="Top" Width="175"/>
+        <ComboBox x:Name="c_registration_status" HorizontalAlignment="Left" Height="20" Margin="17,64,0,0" Grid.Row="4" VerticalAlignment="Top" Width="175"/>
         <Label x:Name="label_Copy9" FontFamily="Arial" FontSize="14" HorizontalContentAlignment="Center"  Content="Регистрационный стаутс" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15,24,0,0" Grid.Row="4" Width="175" Height="30"/>
     </Grid>
 </Window>
