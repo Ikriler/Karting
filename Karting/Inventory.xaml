@@ -33,7 +33,7 @@
         <ListView x:Name="listView" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" Grid.ColumnSpan="4" HorizontalAlignment="Left" Height="282" Margin="21,0,0,73" Grid.Row="1" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="745">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid x:Name="gridInfo">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition/>
                             <ColumnDefinition/>

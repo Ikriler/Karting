@@ -18,6 +18,7 @@ namespace Karting
 {
     public partial class Inventory : Window
     {
+        public ForInitList forInitList;
         public Inventory()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace Karting
             InitListView();
         }
 
-        class ForInitList
+        public class ForInitList
         {
             public int TypeACount { get; set; }
             public int TypeBCount { get; set; }
@@ -52,7 +53,7 @@ namespace Karting
             racerTableAdapter.Fill(racerRows);
             this.t_pilots.Text = "Всего пилотов: " + racerRows.Count();
 
-            ForInitList forInitList = new ForInitList();
+            forInitList = new ForInitList();
 
             complectsTableAdapter complects = new complectsTableAdapter();
             complectsDataTable complectsRows = new complectsDataTable();
@@ -132,7 +133,7 @@ namespace Karting
 
         private void printReport_Click(object sender, RoutedEventArgs e)
         {
-            ReportPrinting reportPrinting = new ReportPrinting();
+            ReportPrinting reportPrinting = new ReportPrinting(forInitList);
             reportPrinting.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             reportPrinting.Show();
             this.Close();
