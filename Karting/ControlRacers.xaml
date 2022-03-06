@@ -30,18 +30,18 @@
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="45,64,0,6" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Width="130" FontSize="18"><Run Text="Статус: "/></TextBlock>
         <ComboBox x:Name="c_status" HorizontalAlignment="Left" Margin="145,64,0,0" Grid.Row="1" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2"/>
         <Button x:Name="reload" Click="reload_Click" Background="#FF241D70" Content="Обновить" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="1" HorizontalAlignment="Left" Margin="101,49,0,0" Grid.Row="2" VerticalAlignment="Top" Width="140" Height="30" Grid.ColumnSpan="2"/>
-        <ListView Grid.ColumnSpan="4" Margin="1,94,-1,1" Grid.Row="2" Grid.RowSpan="3" x:Name="racersList">
+        <ListView Grid.ColumnSpan="4" Margin="15,94,9,1" Grid.Row="2" Grid.RowSpan="3" x:Name="racersList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
                     <GridViewColumn DisplayMemberBinding="{Binding Path=firstName}" Header="Имя" Width="130"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=lastName}" Header="Фамилия" Width="150"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=email}" Header="Email" Width="180"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=status}" Header="Статус" Width="200"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=lastName}" Header="Фамилия" Width="130"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=email}" Header="Email" Width="170"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=status}" Header="Статус" Width="190"/>
                     <GridViewColumn Header="Edit" Width="128">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Edit" x:Name="b_edit" Width="100" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=email}"></Button>
+                                <Button Content="Edit" Click="b_edit_Click" x:Name="b_edit" Width="100" FontFamily="Arial" Background="#FF241D70" Foreground="#FFEBEBEB" Tag="{Binding Path=email}"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

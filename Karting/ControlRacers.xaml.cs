@@ -197,5 +197,14 @@ namespace Karting
             }
             InitRacersList(sort, eventTypeFilter, statusFilter);
         }
+
+        private void b_edit_Click(object sender, RoutedEventArgs e)
+        {
+            string email = (sender as Button).Tag.ToString();
+            BeforeEditRacer beforeEditRacer = new BeforeEditRacer(email);
+            beforeEditRacer.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            beforeEditRacer.Show();
+            this.Close();
+        }
     }
 }

@@ -16,10 +16,12 @@ namespace Karting
 {
     public partial class BeforeEditRacer : Window
     {
-        public BeforeEditRacer()
+        public string currnetBeforeEditRacerEmail;
+        public BeforeEditRacer(string email = "")
         {
             InitializeComponent();
             DataController.StartTimerOnCurrentWindow(this.textBlock_DayXInfo, this.textBlock_DayXChanger);
+            currnetBeforeEditRacerEmail = email;
         }
 
         private void back_Click(object sender, RoutedEventArgs e)
