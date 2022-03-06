@@ -120,6 +120,27 @@ namespace Karting
 
             #endregion
 
+            complectsTableAdapter complects = new complectsTableAdapter();
+            complectsDataTable complectsRows = new complectsDataTable();
+            complects.Fill(complectsRows);
+
+            int oldAmount = 0;
+            if (r_1.IsChecked.Value)
+            {
+                oldAmount = complectsRows.FindBycomplectsId("TypeACount").complectsNumber;
+                complects.ComplectUpdateQuery("TypeACount", oldAmount + 1, "TypeACount");
+            }
+            if (r_2.IsChecked.Value)
+            {
+                oldAmount = complectsRows.FindBycomplectsId("TypeBCount").complectsNumber;
+                complects.ComplectUpdateQuery("TypeBCount", oldAmount + 1, "TypeBCount");
+            }
+            if (r_3.IsChecked.Value)
+            {
+                oldAmount = complectsRows.FindBycomplectsId("TypeCCount").complectsNumber;
+                complects.ComplectUpdateQuery("TypeCCount", oldAmount + 1, "TypeCCount");
+            }
+
 
             RegistrationTableAdapter registrationTableAdapter = new RegistrationTableAdapter();
             RegistrationDataTable registrationRows = new RegistrationDataTable();

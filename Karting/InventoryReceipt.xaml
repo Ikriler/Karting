@@ -25,15 +25,19 @@
         <Label Grid.Column="0" Grid.ColumnSpan="4" Background="#00903e" Margin="0,-5,0,5"/>
         <TextBlock x:Name="textBlock_Copy3" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="102,10,0,0" TextWrapping="Wrap" Text="Kart Skills 2017" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="195" FontSize="26" Grid.ColumnSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
-        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextAlignment="Center" Margin="71,44,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="260" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Text="Поступление инвентаря"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" TextAlignment="Center" Margin="71,49,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="260" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Text="Поступление инвентаря"/>
         <Button x:Name="cancel" Click="cancel_Click" Background="#FF241D70" Content="Отмена" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="32,44,0,0" VerticalAlignment="Top" Width="110" Height="40" Grid.Column="2" Grid.Row="4"/>
-        <Button x:Name="go_back_Copy1" Background="#FF241D70" Content="Сохранить" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="56,44,0,0" VerticalAlignment="Top" Width="145" Height="40" Grid.Column="1" Grid.Row="4" RenderTransformOrigin="0.621,0.5" Grid.ColumnSpan="2"/>
-        <ListView x:Name="listView" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="145" Margin="21,0,0,31" Grid.Row="2" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="360" Grid.Column="1">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Button x:Name="save" Click="save_Click" Background="#FF241D70" Content="Сохранить" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="56,44,0,0" VerticalAlignment="Top" Width="145" Height="40" Grid.Column="1" Grid.Row="4" RenderTransformOrigin="0.621,0.5" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" TextAlignment="Center" Margin="41,34,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="145" FontSize="18" Text="Номер гонщика" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" TextAlignment="Center" Margin="101,69,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="85" FontSize="18" Text="Браслет" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" TextAlignment="Center" Margin="121,9,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="65" FontSize="18" Text="Шлем" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" TextAlignment="Center" Margin="71,44,0,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="115" FontSize="18" Text="Экипировка" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" TextAlignment="Center" Margin="41,89,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="145" FontSize="18" Text="Наименование" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" TextAlignment="Center" Margin="12,89,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="20" Width="145" FontSize="18" Text="Поступление инвентаря" Grid.RowSpan="2" Grid.Column="2"/>
+        <TextBox x:Name="t_number" KeyDown="t_KeyDown" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,31,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t_braslet" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,66,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t_helm" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,9,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="t_equip" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,44,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Window>
