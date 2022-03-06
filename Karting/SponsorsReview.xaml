@@ -28,21 +28,36 @@
         <TextBlock x:Name="textBlock_DayXInfo" TextAlignment="Center" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="5,45,-1,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Arial" Height="35" Width="790" FontSize="20" Grid.ColumnSpan="4" />
         <Button x:Name="go_back" Click="go_back_Click" Background="#FF241D70" Content="Назад" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="15,20,0,0" VerticalAlignment="Top" Width="110" Height="40"/>
         <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Margin="130,79,0,66" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontFamily="Arial" Height="45" Width="150" FontSize="18" Grid.RowSpan="2" Grid.ColumnSpan="2"><Run Text="Отсортировать"/><Run Text=":"/></TextBlock>
-        <ComboBox x:Name="c_gender" Grid.Column="1" HorizontalAlignment="Left" Margin="86,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="search" Background="#FF241D70" Content="Сортировка" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <ListView Grid.ColumnSpan="4" Margin="1,84,-1,1" Grid.Row="2" Grid.RowSpan="3">
+        <ComboBox x:Name="c_sort" Grid.Column="1" HorizontalAlignment="Left" Margin="86,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="210" Height="30" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="sort" Click="sort_Click" Background="#FF241D70" Content="Сортировка" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" Grid.Column="2" HorizontalAlignment="Left" Margin="112,79,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Height="30" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <ListView Grid.ColumnSpan="4" Margin="1,84,-1,1" Grid.Row="2" Grid.RowSpan="3" x:Name="charityList">
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=DateOrder}" Header="Логотип" Width="266"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=NameProduct}" Header="Наименование" Width="266"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=Description}" Header="Сумма" Width="266"/>
+                    <GridViewColumn Header="Логотип" Width="266">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=imagePath}" Height="130" Width="130"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=charityName}" Header="Наименование" Width="266"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=commonAmount}" Header="Сумма" Width="266">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Height="130" Width="130">
+                                    <Run Text="$ "/>
+                                    <Run Text="{Binding commonAmount}"/>
+                                </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
 
                 </GridView>
             </ListView.View>
         </ListView>
         <Button x:Name="logout" Click="logout_Click" Background="#FF241D70" Content="Logout" FontFamily="Arial" FontSize="18" Foreground="#FFEBEBEB" HorizontalAlignment="Left" Margin="59,20,0,0" VerticalAlignment="Top" Width="120" Height="40" Grid.Column="3"/>
-        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Margin="0,19,-1,51" Grid.Row="2" TextWrapping="Wrap" Text="Благотворительные организации: 10" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
-        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Margin="0,44,-1,26" Grid.Row="2" TextWrapping="Wrap" Text="Всего спонсорских взносов: $10000" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name="t_charity_count" HorizontalAlignment="Left" Margin="0,19,-1,51" Grid.Row="2" TextWrapping="Wrap" Text="Благотворительные организации: 10" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
+        <TextBlock x:Name="t_common_amounts" HorizontalAlignment="Left" Margin="0,44,-1,26" Grid.Row="2" TextWrapping="Wrap" Text="Всего спонсорских взносов: $10000" TextAlignment="Center" FontFamily="Arial" Width="795" FontSize="18" Grid.ColumnSpan="4"/>
     </Grid>
 </Window>

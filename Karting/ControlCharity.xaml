@@ -32,7 +32,7 @@
             <ListView.View>
                 <GridView AllowsColumnReorder="true">
 
-                    <GridViewColumn Header="Лого" Width="140">
+                    <GridViewColumn Header="Логотип" Width="140">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Image Source="{Binding Path=ImagePath}" Height="130" Width="130"/>
